@@ -1,0 +1,123 @@
+body
+  color: $text-color
+  font-family: 'GT Eesti Pro Display', Arial, sans-serif
+  font-size: 14px
+  font-weight: 400
+  line-height: 1.5
+
+  @media(min-width: 1024px)
+    font-size: 16px
+
+a
+  color: $blue
+  transition: color 0.3s
+
+  &:hover,
+  &:focus
+
+b,
+strong
+  font-weight: 700
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+  line-height: 1.25
+  text-transform: uppercase
+
+h1,.h1
+  font-size: 72px
+  font-weight: 900
+  margin-top: 0
+  margin-bottom: 15px
+
+h2,.h2
+  font-size: 46px
+  font-weight: 800
+  margin-top: 0
+  margin-bottom: 30px
+
+h3,.h3
+  font-size: 32px
+  font-weight: 800
+  margin-top: 0
+  margin-bottom: 30px
+
+h4,.h4
+  font-size: 18px
+  font-weight: 800
+  margin-bottom: 20px
+
+  @media(min-width: 1024px)
+    font-size: 24px
+
+h5,.h5
+  font-size: 16px
+  font-weight: 800
+  margin-bottom: 20px
+
+  @media(min-width: 1024px)
+    font-size: 22px
+
+h6,.h6
+  font-size: 16px
+  font-weight: 800
+  margin-bottom: 20px
+
+  @media(min-width: 1024px)
+    font-size: 22px
+
+p,
+ul,
+ol,
+table,
+.table-responsive,
+.responsive-table
+  margin-top: 0
+  margin-bottom: 20px
+
+p,
+.table-responsive,
+.responsive-table
+  &:last-child
+    margin-bottom: 0
+
+.table-responsive,
+.responsive-table
+  min-height: 0.01%
+  overflow-x: auto
+
+  table
+    margin-bottom: 0
+
+table
+  border-collapse: collapse
+  border: 1px solid
+  max-width: 100%
+  text-align: left
+  width: 100%
+
+  th,
+  td
+    border: 1px solid
+    padding: 10px
+    vertical-align: top
+
+ol,
+ul
+  list-style-position: inside
+  padding: 0
+
+ol
+  ul
+    list-style: disc
+    list-style-position: inside
+
+img
+  height: auto
+  max-width: 100%
+  vertical-align: top

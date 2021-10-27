@@ -1,0 +1,419 @@
+.header
+  background-color: #fff
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s
+  transform: translateY(0)
+  z-index: 10
+
+  &.scrolled
+    box-shadow: 0 0 6px 0 rgba($text-color, 0.1)
+
+  &.out
+    box-shadow: none
+    transform: translateY(-100%)
+
+  &__top
+    background-color: #fff
+
+  &__top-inner
+    align-items: center
+    display: flex
+    justify-content: space-between
+    min-height: 60px
+
+    @media(min-width: 1350px)
+      min-height: 80px
+
+  &__logo
+    align-items: center
+    display: flex
+    order: 2
+    width: 180px
+
+    @media(min-width: 1024px)
+      margin-right: 20px
+      order: 0
+      width: 120px
+
+    @media(min-width: 1350px)
+      margin-right: 40px
+      width: 200px
+
+    @media(min-width: 1600px)
+      margin-right: 95px
+
+  &__location-block
+    order: 1
+
+    @media(min-width: 1024px)
+      margin-left: auto
+      order: 0
+
+  &__location-button
+    align-items: center
+    background-color: transparent
+    border: 1px solid $red
+    border-radius: 6px
+    cursor: pointer
+    display: flex
+    font-weight: 700
+    height: 40px
+    justify-content: center
+    padding: 0
+    transition: color 0.3s
+    width: 40px
+
+    @media(min-width: 1350px)
+      border: none
+      height: auto
+      width: auto
+
+    &:hover,
+    &:focus
+      color: $red
+
+    svg
+      fill: $red
+      height: 24px
+      width: 24px
+
+      @media(min-width: 1350px)
+        margin-right: 12px
+
+    span
+      border-bottom: 1px dashed currentColor
+      display: none
+
+      @media(min-width: 1350px)
+        display: block
+
+  &__phone-block
+    display: none
+    margin-left: 20px
+
+    @media(min-width: 1024px)
+      display: block
+
+    @media(min-width: 1350px)
+      margin-left: 40px
+
+    @media(min-width: 1600px)
+      margin-left: 80px
+
+  &__phone
+    color: $text-color
+    font-size: 20px
+    font-weight: 700
+    text-decoration: none
+
+    @media(min-width: 1350px)
+      font-size: 24px
+
+    @media(min-width: 1600px)
+      font-size: 28px
+
+    &:hover,
+    &:focus
+      color: $red
+
+  &__top-links
+    align-items: center
+    display: flex
+    order: 3
+
+    @media(min-width: 1024px)
+      margin-left: 20px
+
+    @media(min-width: 1350px)
+      margin-left: 40px
+
+    @media(min-width: 1600px)
+      margin-left: 60px
+
+  &__top-link
+    align-items: center
+    display: flex
+    height: 40px
+    justify-content: center
+    position: relative
+    width: 40px
+
+    @media(min-width: 1024px)
+      height: 24px
+      width: 24px
+
+    &:not(:first-child)
+      display: none
+
+      @media(min-width: 1024px)
+        display: flex
+
+    &::after
+      @media(min-width: 1024px)
+        content: ''
+        height: 40px
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 40px
+
+    &:hover,
+    &:focus
+      svg
+        fill: $blue
+
+    svg
+      fill: $red
+      height: 24px
+      transition: fill 0.3s
+      width: 24px
+
+    &:not(:last-child)
+      @media(min-width: 1024px)
+        margin-right: 20px
+
+      @media(min-width: 1350px)
+        margin-right: 30px
+
+  &__bottom
+    background-color: $blue
+
+  &__bottom-inner
+    align-items: center
+    display: flex
+    min-height: 60px
+
+    @media(min-width: 1350px)
+      min-height: 80px
+
+  &__burger
+    align-items: center
+    background-color: $red
+    border-radius: 6px
+    border: none
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 12px
+    height: 40px
+    justify-content: center
+    padding: 0
+    width: 40px
+
+    @media(min-width: 1024px)
+      border-radius: 23px
+      height: auto
+      min-height: 46px
+      padding: 13px 20px
+      width: auto
+
+    @media(min-width: 1350px)
+      font-size: 14px
+      min-width: 200px
+      padding: 13px 29px
+
+    svg
+      fill: #fff
+      height: 20px
+      width: 20px
+
+      @media(min-width: 1024px)
+        margin-right: 15px
+        height: 16px
+        width: 16px
+
+      @media(min-width: 1350px)
+        height: 20px
+        width: 20px
+
+    span
+      display: none
+
+      @media(min-width: 1024px)
+        display: block
+
+  &__search
+    flex-grow: 1
+    max-width: 985px
+    margin-left: 20px
+
+    @media(min-width: 1024px)
+      margin-right: 30px
+
+    @media(min-width: 1350px)
+      margin-left: 40px
+
+    @media(min-width: 1600px)
+      margin-left: 75px
+
+  &__personal-block
+    display: none
+    margin-left: auto
+
+    @media(min-width: 1024px)
+      display: block
+
+  &__personal
+    align-items: center
+    color: #fff
+    display: flex
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      text-decoration: underline
+
+    svg
+      fill: #fff
+      height: 20px
+      margin-right: 15px
+      width: 20px
+
+  &__bottom-links
+    align-items: center
+    display: none
+    margin-left: 20px
+
+    @media(min-width: 1024px)
+      display: flex
+
+    @media(min-width: 1350px)
+      margin-left: 40px
+
+    @media(min-width: 1600px)
+      margin-left: 80px
+
+  &__bottom-link
+    display: block
+    height: 24px
+    position: relative
+    width: 24px
+
+    &::after
+      @media(min-width: 1024px)
+        content: ''
+        height: 40px
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 40px
+
+    svg
+      fill: #fff
+      height: 24px
+      width: 24px
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media(min-width: 1350px)
+        margin-right: 30px
+
+  &__bottom-link-qnt
+    align-items: center
+    background-color: $red
+    border-radius: 50%
+    color: #fff
+    display: flex
+    font-size: 8px
+    height: 15px
+    justify-content: center
+    left: auto
+    position: absolute
+    right: 0
+    top: 0
+    transform: translate(50%, -50%)
+    width: 15px
+    z-index: 1
+
+.top-menu
+  align-items: center
+  display: none
+  font-size: 14px
+  list-style: none
+  margin: 0
+  padding: 0
+
+  @media(min-width: 1024px)
+    display: flex
+
+  @media(min-width: 1600px)
+    font-size: 16px
+
+  &__item
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media(min-width: 1600px)
+        margin-right: 30px
+
+  &__link
+    color: $text-color
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      color: $red
+
+.search-bar
+  border-radius: 23px
+  overflow: hidden
+  position: relative
+
+  &__input
+    border-radius: 23px
+    border: 1px solid #fff
+    background-color: transparent
+    color: #fff
+    font-size: 14px
+    height: 46px
+    padding: 14px 56px 14px 20px
+    text-overflow: ellipsis
+    width: 100%
+
+    @media(min-width: 1024px)
+      padding: 14px 76px 14px 30px
+
+    &::-webkit-input-placeholder
+      color: rgba(#fff, 0.6)
+      opacity: 1
+
+    &::-moz-placeholder
+      color: rgba(#fff, 0.6)
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: rgba(#fff, 0.6)
+      opacity: 1
+
+  &__submit
+    align-items: center
+    border: none
+    background-color: transparent
+    display: flex
+    height: 46px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 0
+    top: 0
+    width: 46px
+    z-index: 1
+
+    @media(min-width: 1024px)
+      padding: 0 30px
+
+    &:disabled
+      svg
+        fill: rgba(#fff,0.6)
+
+    svg
+      fill: #fff
+      height: 16px
+      width: 16px
