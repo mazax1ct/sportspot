@@ -178,6 +178,12 @@
                   d="M10.859 6.582C10.7302 6.45187 10.6579 6.27614 10.6579 6.09301C10.6579 5.90987 10.7302 5.73414 10.859 5.60401C10.9223 5.53976 10.9977 5.48873 11.0809 5.4539C11.1641 5.41908 11.2533 5.40114 11.3435 5.40114C11.4337 5.40114 11.523 5.41908 11.6061 5.4539C11.6893 5.48873 11.7647 5.53976 11.828 5.60401L15.658 9.512C15.7867 9.64244 15.8588 9.81829 15.8588 10.0015C15.8588 10.1847 15.7867 10.3606 15.658 10.491L11.828 14.399C11.7647 14.4633 11.6893 14.5143 11.6061 14.5491C11.523 14.5839 11.4337 14.6019 11.3435 14.6019C11.2533 14.6019 11.1641 14.5839 11.0809 14.5491C10.9977 14.5143 10.9223 14.4633 10.859 14.399C10.7302 14.2689 10.6579 14.0931 10.6579 13.91C10.6579 13.7269 10.7302 13.5511 10.859 13.421L14 10L10.859 6.582Z" />
             </g>
         </symbol>
+        <symbol id="arrow_right" viewBox="0 0 14 14">
+            <path d="M6.99563 5.23964H0V8.72925H6.99563V13.9741L14 6.98619L6.99563 0V5.23964Z" />
+        </symbol>
+        <symbol id="arrow_left" viewBox="0 0 14 14">
+            <path d="M7.00437 5.23964H14V8.72925H7.00437V13.9741L0 6.98619L7.00437 0V5.23964Z" />
+        </symbol>
     </svg>
 
     <header class="header compensate-scrollbar">
@@ -275,7 +281,227 @@
 
     <main class="page-content">
         <div class="container">
+            <div class="main-slider">
+                <div class="js-main-slider">
+                    <div>
+                        <div class="main-banner">
+                            <picture class="main-banner__picture">
+                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 1024px)">
+                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
+                            </picture>
+                            <div class="main-banner__inner container light">
+                                <h1>ТОВАР НЕДЕЛИ!<br> - 50% на все диски</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main-banner">
+                            <picture class="main-banner__picture">
+                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 1024px)">
+                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
+                            </picture>
+                            <div class="main-banner__inner container light">
+                                <p class="h1">ТОВАР НЕДЕЛИ!<br> - 50% на все диски</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main-banner">
+                            <picture class="main-banner__picture">
+                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 1024px)">
+                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
+                            </picture>
+                            <div class="main-banner__inner container light">
+                                <p class="h1">ТОВАР НЕДЕЛИ!<br> - 50% на все диски</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main-banner">
+                            <picture class="main-banner__picture">
+                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 1024px)">
+                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
+                            </picture>
+                            <div class="main-banner__inner container light">
+                                <p class="h1">ТОВАР НЕДЕЛИ!<br> - 50% на все диски</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-slider__nav-block container">
+                    <div class="main-slider__nav-dots"></div>
+                    <div class="main-slider__nav-nums"><span>01</span> / 04</div>
+                    <div class="main-slider__nav-arrows"></div>
+                </div>
+            </div>
 
+            <div class="title-block title-block--two_cols">
+                <div class="title-block__block">
+                    <h2>Популярные категории</h2>
+                </div>
+                <div class="title-block__block title-block__block--two_cols">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis elementum libero scelerisque porta</p>
+                    <p>
+                        <a class="forward-link" href="#">
+                            Смотреть все категории
+                            <svg>
+                                <use xlink:href="#arrow_right"></use>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="title-block title-block--two_cols">
+                <div class="title-block__block">
+                    <h2>Хиты продаж</h2>
+                </div>
+                <div class="title-block__block title-block__block--two_cols">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis elementum libero scelerisque porta</p>
+                    <p>
+                        <a class="forward-link" href="#">
+                            Перейти в каталог
+                            <svg>
+                                <use xlink:href="#arrow_right"></use>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="banners">
+
+            </div>
+
+            <div class="title-block">
+                <h2>ЗАЛ ПОД КЛЮЧ</h2>
+                <p>Мы работаем на рынке спортивных тренажёров с 2009 года. Заботимся о своей репутации и всегда идём навстречу клиентам.<br> Ведь гораздо выгодней для нас, если покупатель вернётся к нам или порекомендует нас своим знакомым</p>
+            </div>
+
+            <div class="banner">
+                <picture class="banner__picture">
+                    <source srcset="images/content/banners/img_1_desk.jpg, images/content/banners/img_1_desk@2x.jpg 2x" media="(min-width: 1024px)">
+                    <img src="images/content/banners/img_1_mob.jpg" srcset="images/content/banners/img_1_mob@2x.jpg 2x" alt="">
+                </picture>
+            </div>
+
+            <div class="title-block title-block--two_cols">
+                <div class="title-block__block">
+                    <h2>Лучшая компания в своем сегменте с широким ассортиментом</h2>
+                    <p style="max-width: 720px">Мы являемся одним из самых крупных магазинов спортивных тренажёров. Наши менеджеры постоянно проходят обучение у производителей. Мы предоставить клиентам профессиональную помощь в выборе!</p>
+                </div>
+                <div class="title-block__block">
+                    <div class="infographic">
+                        <div class="infographic__item">
+                            <p class="infographic__num">12 +</p>
+                            <p>Заботимся о своей репутации и всегда идём навстречу клиентам более 12&nbsp;лет</p>
+                        </div>
+                        <div class="infographic__item">
+                            <p class="infographic__num">10 000 +</p>
+                            <p>Нами доставлено и собрано более 10&nbsp;000 спортивных тренажеров по всей России и Казахстану</p>
+                        </div>
+                        <div class="infographic__item">
+                            <p class="infographic__num">27 +</p>
+                            <p>У нас есть собственные представительства в 27 городах России</p>
+                        </div>
+                        <div class="infographic__item">
+                            <p class="infographic__num">32 000 +</p>
+                            <p>Мы осуществляем быструю доставку в 32&nbsp;000 населенных пунктов России</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logos-list">
+                <a class="logos-list__item" href="#">
+                    <img src="images/content/logos/img_1.jpg" srcset="images/content/logos/img_1.jpg" alt="alt">
+                </a>
+                <a class="logos-list__item" href="#">
+                    <img src="images/content/logos/img_2.jpg" srcset="images/content/logos/img_2.jpg" alt="alt">
+                </a>
+                <a class="logos-list__item" href="#">
+                    <img src="images/content/logos/img_3.jpg" srcset="images/content/logos/img_3.jpg" alt="alt">
+                </a>
+                <a class="logos-list__item" href="#">
+                    <img src="images/content/logos/img_4.jpg" srcset="images/content/logos/img_4.jpg" alt="alt">
+                </a>
+                <a class="logos-list__item" href="#">
+                    <img src="images/content/logos/img_5.jpg" srcset="images/content/logos/img_5.jpg" alt="alt">
+                </a>
+            </div>
+
+            <div class="title-block title-block--two_cols">
+                <div class="title-block__block">
+                    <h2>Статьи и обзоры</h2>
+                </div>
+                <div class="title-block__block">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis elementum libero scelerisque porta</p>
+                    <p>
+                        <a class="forward-link" href="#">
+                            Все новости и обзоры
+                            <svg>
+                                <use xlink:href="#arrow_right"></use>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="articles-list">
+                <div class="articles-list__item">
+                    <article class="article">
+                        <picture class="article__picture">
+                            <img src="images/content/articles/img_1.jpg" srcset="images/content/articles/img_1.jpg" alt="Обзор от Sport Olimp лучших беговых дорожек">
+                        </picture>
+                        <div class="article__info">
+                            <time class="article__date">31.03.2021</time>
+                            <h2 class="article__title"><a href="#">Обзор от Sport Olimp лучших беговых дорожек</a></h2>
+                            <p class="article__preview-text">Мы никогда не скрываем свою любовь к беговым дорожкам. Поэтому с большим энтузиазмом каждый год собираем для вас ТОП-10 самых лучших дорожек для дома</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="articles-list__item">
+                    <article class="article">
+                        <picture class="article__picture">
+                            <img src="images/content/articles/img_2.jpg" srcset="images/content/articles/img_2.jpg" alt="Обзор от Sport Olimp лучших беговых дорожек">
+                        </picture>
+                        <div class="article__info">
+                            <time class="article__date">31.03.2021</time>
+                            <h2 class="article__title"><a href="#">Обзор от Sport Olimp лучших беговых дорожек</a></h2>
+                            <p class="article__preview-text">Мы никогда не скрываем свою любовь к беговым дорожкам. Поэтому с большим энтузиазмом каждый год собираем для вас ТОП-10 самых лучших дорожек для дома</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="articles-list__item">
+                    <article class="article">
+                        <picture class="article__picture">
+                            <img src="images/content/articles/img_3.jpg" srcset="images/content/articles/img_3.jpg" alt="Обзор от Sport Olimp лучших беговых дорожек">
+                        </picture>
+                        <div class="article__info">
+                            <time class="article__date">31.03.2021</time>
+                            <h2 class="article__title"><a href="#">Обзор от Sport Olimp лучших беговых дорожек</a></h2>
+                            <p class="article__preview-text">Мы никогда не скрываем свою любовь к беговым дорожкам. Поэтому с большим энтузиазмом каждый год собираем для вас ТОП-10 самых лучших дорожек для дома</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="articles-list__item">
+                    <article class="article">
+                        <picture class="article__picture">
+                            <img src="images/content/articles/img_4.jpg" srcset="images/content/articles/img_4.jpg" alt="Обзор от Sport Olimp лучших беговых дорожек">
+                        </picture>
+                        <div class="article__info">
+                            <time class="article__date">31.03.2021</time>
+                            <h2 class="article__title"><a href="#">Обзор от Sport Olimp лучших беговых дорожек</a></h2>
+                            <p class="article__preview-text">Мы никогда не скрываем свою любовь к беговым дорожкам. Поэтому с большим энтузиазмом каждый год собираем для вас ТОП-10 самых лучших дорожек для дома</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -288,7 +514,7 @@
                 </div>
                 <div class="footer__subscribe-form-block">
                     <form class="footer__subscribe-form" action="">
-                        <input class="js-email-mask footer__subscribe-input" name="subscribe" type="text" value="" placeholder="Напишите ваш e-mail">
+                        <input class="footer__subscribe-input" name="subscribe" type="text" value="" placeholder="Напишите ваш e-mail">
                         <button class="footer__subscribe-submit" type="submit" disabled>Подписаться</button>
                     </form>
                     <p class="footer__subscribe-form-note">Нажимая на кнопку “Подписаться” вы соглашаетесь с <a href="#">политикой конфиденциальности сайта</a>.</p>
@@ -435,6 +661,9 @@
     <script src="js/footer-subscribe.js"></script>
     
     <script src="js/preloader.js"></script>
+
+    <script src="js/slick.min.js"></script>
+    <script src="js/main-slider.js"></script>
 
 </body>
 

@@ -38,6 +38,9 @@
       order: 0
       width: 120px
 
+    @media(min-width: 1200px)
+      width: 162px
+
     @media(min-width: 1350px)
       margin-right: 40px
       width: 200px
@@ -59,6 +62,7 @@
     border-radius: 6px
     cursor: pointer
     display: flex
+    font-size: 14px
     font-weight: 700
     height: 40px
     justify-content: center
@@ -66,10 +70,13 @@
     transition: color 0.3s
     width: 40px
 
-    @media(min-width: 1350px)
+    @media(min-width: 1400px)
       border: none
       height: auto
       width: auto
+
+    @media(min-width: 1900px)
+      font-size: 16px
 
     &:hover,
     &:focus
@@ -80,14 +87,14 @@
       height: 24px
       width: 24px
 
-      @media(min-width: 1350px)
+      @media(min-width: 1400px)
         margin-right: 12px
 
     span
       border-bottom: 1px dashed currentColor
       display: none
 
-      @media(min-width: 1350px)
+      @media(min-width: 1400px)
         display: block
 
   &__phone-block
@@ -245,6 +252,7 @@
       margin-right: 30px
 
     @media(min-width: 1350px)
+      margin-right: 40px
       margin-left: 40px
 
     @media(min-width: 1600px)
@@ -406,7 +414,7 @@
     width: 46px
     z-index: 1
 
-    @media(min-width: 1024px)
+    //@media(min-width: 1024px)
       padding: 0 30px
 
     &:disabled

@@ -462,11 +462,13 @@
 }
 
 .select2-container--default .select2-results__option--selected {
-    background-color: #000;
+    background-color: $blue;
+    color: #fff;
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-    background-color: #000;
+    background-color: $blue;
+    color: #fff;
 }
 
 .select2-container--default .select2-results__group {

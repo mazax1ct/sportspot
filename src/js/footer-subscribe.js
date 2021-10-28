@@ -6,3 +6,12 @@ $(document).on('input', '.footer__subscribe-input', function () {
 		$('.footer__subscribe-submit').prop('disabled', 'disabled');
 	}
 });
+
+$(".footer__subscribe-input").inputmask({
+	alias: "email",
+	"clearIncomplete": true,
+	showMaskOnHover: false,
+	"onincomplete": function() {
+		$(this).parent('.footer__subscribe-form').find('.footer__subscribe-submit').prop('disabled', 'disabled');
+	}
+});
