@@ -1,0 +1,70 @@
+.categories-list
+  border-top: 3px solid $text-color
+  display: flex
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+  &__list
+    align-items: center
+    display: flex
+    flex-grow: 1
+    list-style: none
+    margin: 0
+    overflow-y: hidden
+    overflow-x: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+  &__item
+    padding: 6px
+
+  &__link
+    border: 3px solid transparent
+    color: $blue
+    display: block
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    padding: 13px 18px
+    text-transform: uppercase
+    text-decoration: none
+    transition: color 0.3s, background-color 0.3s
+    white-space: nowrap
+
+    @media(min-width: 1900px)
+      padding: 26px 36px
+
+    &.is-active
+      border-color: $text-color
+
+    &:hover,
+    &:active
+      background-color: $blue
+      color: #fff
+
+  &__button
+    align-items: center
+    background-color: $text-color
+    border: none
+    cursor: pointer
+    display: flex
+    height: auto
+    justify-content: center
+    min-width: 35px
+    padding: 0
+    transition: background-color 0.3s
+    width: 35px
+
+    &:hover
+      background-color: $red
+
+    svg
+      fill: #fff
+      height: 14px
+      width: 14px

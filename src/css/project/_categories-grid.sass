@@ -1,0 +1,228 @@
+.categories-grid
+  border-left: 3px solid $text-color
+  border-top: 3px solid $text-color
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 768px)
+    display: grid
+    grid-auto-flow: dense
+    grid-template-columns: 1fr 1fr
+
+  @media(min-width: 1024px)
+    grid-template-columns: 1fr 1fr 1fr 1fr
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__item
+    border-right: 3px solid $text-color
+    border-bottom: 3px solid $text-color
+
+    &--type_1
+      grid-row: span 2
+
+    &--type_2
+      grid-column: span 2
+      max-width: 100%
+
+      .categories-grid__link-image
+        object-fit: contain
+
+      .categories-grid__link-text
+        width: 50%
+
+  &__link
+    display: flex
+    min-height: 300px
+    overflow: hidden
+    position: relative
+    text-decoration: none
+
+    @media(min-width: 1350px)
+      min-height: 430px
+
+    &--type_1
+      min-height: 603px
+
+      @media(min-width: 1350px)
+        min-height: 863px
+
+      .categories-grid__link-image
+        bottom: 0
+        height: auto
+        top: auto
+
+    &.red
+      background-color: $red
+      color: #fff
+
+    &.blue
+      background-color: $blue
+      color: #fff
+
+    &.grey
+      background-color: #F2F3F5
+      color: $blue
+
+    &:hover
+      .categories-grid__link-image
+        transform: scale(1.02)
+
+      .categories-grid__link-button
+        background-color: $red
+        color: #fff
+
+        &.blue
+          background-color: $blue
+
+        .categories-grid__link-icon
+          border-color: #fff
+
+        svg
+          fill: #fff
+
+  &__link-image
+    height: 100%
+    left: 0
+    object-fit: cover
+    position: absolute
+    top: 0
+    transform: scale(1)
+    transition: transform 0.3s
+    width: 100%
+
+  &__link-inner
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    height: auto
+    padding: 30px 20px
+    position: relative
+    width: 100%
+    z-index: 1
+
+    @media(min-width: 1350px)
+      padding: 40px 30px
+
+  &__link-title
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 22px
+    font-weight: 800
+    line-height: 1.25
+    margin-bottom: 15px
+    text-transform: uppercase
+
+    @media(min-width: 1350px)
+      font-size: 28px
+
+    @media(min-width: 1900px)
+      font-size: 32px
+
+  &__link-text
+    display: block
+    margin-bottom: 20px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+      margin-bottom: 40px
+
+  &__link-button
+    align-items: center
+    border-radius: 30px
+    background-color: #fff
+    color: $text-color
+    font-size: 12px
+    display: inline-flex
+    padding: 10px 22px
+    transition: background-color 0.3s, color 0.3s
+    text-decoration: none
+
+    @media(min-width: 1350px)
+      font-size: 16px
+      padding: 18px 30px
+
+  &__link-icon
+    align-items: center
+    border-radius: 50%
+    border: 3px solid $text-color
+    display: flex
+    justify-content: center
+    height: 20px
+    margin-left: 12px
+    transition: border-color 0.3s
+    width: 20px
+
+    svg
+      fill: $text-color
+      height: 8px
+      transition: fill 0.3s
+      width: 8px
+
+.categories-slider
+  max-width: 100%
+  overflow: hidden
+  width: calc(100vw - 6px)
+
+  @media(min-width: 1024px)
+    width: calc(50vw - 13px)
+
+  .slick-prev,
+  .slick-next
+    align-items: center
+    background-color: $red
+    border: none
+    cursor: pointer
+    display: flex
+    height: 50%
+    justify-content: center
+    left: auto
+    padding: 0
+    position: absolute
+    right: 0
+    transition: background-color 0.3s
+    width: 60px
+    z-index: 1
+
+    @media(min-width: 1900px)
+      width: 100px
+
+    &:hover
+      background-color: $blue
+
+    svg
+      fill: #fff
+      height: 14px
+      width: 14px
+
+      @media(min-width: 1900px)
+        height: 24px
+        width: 24px
+
+  .slick-prev
+    top: 0
+
+  .slick-next
+    bottom: 0
+    height: calc(50% - 1px)
+    top: auto
+
+  .categories-grid__link-image
+    width: calc(100% - 60px)
+
+    @media(min-width: 1900px)
+      width: calc(100% - 100px)
+
+  .categories-grid__link-inner
+    padding-right: 80px
+
+    @media(min-width: 1900px)
+      padding-right: 120px

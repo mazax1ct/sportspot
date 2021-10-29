@@ -1,0 +1,143 @@
+.small-banners
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 768px)
+    display: flex
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+.small-banner
+  background-color: rgba($text-color, 0.2)
+  min-height: 375px
+  overflow: hidden
+  position: relative
+
+  @media(min-width: 768px)
+    width: 50%
+
+  @media(min-width: 1024px)
+    min-height: 400px
+
+  @media(min-width: 1350px)
+    min-height: 600px
+
+  &:hover
+    .small-banner__image
+      transform: scale(1.02)
+
+    .small-banner__more
+      background-color: $red
+      color: #fff
+
+      &.blue
+        background-color: $blue
+
+      .arrow
+        border-color: #fff
+
+      svg
+        fill: #fff
+
+  &__image
+    height: 100%
+    left: 0
+    object-fit: cover
+    position: absolute
+    transition: transform 0.3s
+    transform: scale(1)
+    top: 0
+    width: 100%
+    z-index: -1
+
+  &__inner
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    min-height: 100%
+    padding: 40px 20px
+
+    @media(min-width: 1350px)
+      padding: 60px 40px
+
+    @media(min-width: 1900px)
+      padding-left: 100px
+      padding-right: 100px
+
+    &.light
+      color: #fff
+
+  &__period
+    background-color: #fff
+    border-radius: 19px
+    color: $text-color
+    display: inline-block
+    font-size: 12px
+    margin-bottom: 40px
+    padding: 10px 22px
+
+    @media(min-width: 1350px)
+      margin-bottom: 80px
+
+  &__title
+    @media(max-width: 1023px)
+      font-size: 20px
+      margin-bottom: 15px
+
+  &__preview-text
+    max-width: 360px
+    margin-bottom: 40px
+    width: 50%
+
+    @media(max-width: 1349px)
+      font-size: 12px
+
+  &__more-block
+    margin-top: auto
+
+  &__more
+    align-items: center
+    border-radius: 30px
+    background-color: #fff
+    color: $text-color
+    display: inline-flex
+    padding: 10px 22px
+    transition: background-color 0.3s, color 0.3s
+    text-decoration: none
+
+    @media(min-width: 1350px)
+      padding: 18px 30px
+
+    &::after
+      bottom: 0
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+
+    .arrow
+      align-items: center
+      border-radius: 50%
+      border: 3px solid $text-color
+      display: flex
+      justify-content: center
+      height: 20px
+      margin-left: 12px
+      transition: border-color 0.3s
+      width: 20px
+
+    svg
+      fill: $text-color
+      height: 8px
+      transition: fill 0.3s
+      width: 8px
