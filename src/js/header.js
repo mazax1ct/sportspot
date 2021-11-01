@@ -12,6 +12,12 @@ $(window).scroll(function() {
 
 	if ( scrolled > $('.header').height() && scrolled > scrollPrev ) {
 		header.addClass('out');
+		/*закрываем поиск*/
+		document.removeEventListener('click', closeSearch);
+    $('.search-block').removeClass('open');
+    $('.search-dropdown').fadeOut();
+		$('.search-bar__input').blur();
+		/*закрываем поиск*/
 	} else {
 		header.removeClass('out');
 	}

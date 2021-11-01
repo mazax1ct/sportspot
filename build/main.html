@@ -249,14 +249,75 @@
                     <span>Каталог товаров</span>
                 </button>
                 <div class="header__search">
-                    <form class="search-bar" action="" method="">
-                        <input class="search-bar__input" type="text" name="q" value="" placeholder="Поиск по сайту среди 10 000 товаров">
-                        <button class="search-bar__submit" type="submit" title="Найти" disabled>
-                            <svg>
-                                <use xlink:href="#search"></use>
-                            </svg>
-                        </button>
-                    </form>
+                    <div class="search-block">
+                        <form class="search-bar" action="" method="">
+                            <input class="search-bar__input" type="text" name="q" value="" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="Поиск по сайту среди 10 000 товаров">
+                            <button class="search-bar__submit" type="submit" title="Найти" disabled>
+                                <svg>
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="search-dropdown">
+                            <div class="search-dropdown__list">
+                                <p class="search-dropdown__title">Категории:</p>
+                                <ul class="search-dropdown__categories">
+                                    <li>
+                                        <a href="#">Портативные</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Механические</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Магнитно-механические</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">В рассрочку</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">До 130 кг</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Детские</a>
+                                    </li>
+                                </ul>
+                                <p class="search-dropdown__title">Товары:</p>
+                                <ul class="search-dropdown__links">
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                    <li><a href="#">Эллиптический эргометр Unixfit MV-500</a></li>
+                                </ul>
+                                <p class="search-dropdown__title">Вы недавно смотрели:</p>
+                                <ul class="search-dropdown__views">
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/content/search/img_1.jpg" srcset="images/content/search/img_1@2x.jpg 2x" alt="alt">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/content/search/img_1.jpg" srcset="images/content/search/img_1@2x.jpg 2x" alt="alt">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/content/search/img_1.jpg" srcset="images/content/search/img_1@2x.jpg 2x" alt="alt">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/content/search/img_1.jpg" srcset="images/content/search/img_1@2x.jpg 2x" alt="alt">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="header__personal-block">
                     <a class="header__personal" href="#">
@@ -1017,6 +1078,7 @@
     
     <script src="js/video.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/main.js"></script>
     <script src="js/footer-subscribe.js"></script>
     
