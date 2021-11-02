@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <title>Главная</title>
+    <title>Каталог</title>
 
     <meta name="description" content="">
 
@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body class="main-page">
+<body>
     <div id="preloader">
         <svg width="199" height="27" viewBox="0 0 199 27" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -455,80 +455,15 @@
     </div>
 
     <main class="page-content">
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                <li class="breadcrumbs__item">Каталог товаров</li>
+            </ul>
+        </div>
         <div class="container">
-            <div class="main-slider">
-                <div class="js-main-slider">
-                    <div>
-                        <div class="main-banner">
-                            <picture class="main-banner__picture">
-                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 768px)">
-                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
-                            </picture>
-                            <div class="main-banner__inner container light">
-                                <h1>ТОВАР НЕДЕЛИ!<br> - 50% на все диски</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="main-banner">
-                            <picture class="main-banner__picture">
-                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 768px)">
-                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
-                            </picture>
-                            <div class="main-banner__inner container light">
-                                <p class="h1">ТОВАР НЕДЕЛИ!<br> - 50% на все диски</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="main-banner">
-                            <picture class="main-banner__picture">
-                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 768px)">
-                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
-                            </picture>
-                            <div class="main-banner__inner container light">
-                                <p class="h1">ТОВАР НЕДЕЛИ!<br> - 50% на все диски</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="main-banner">
-                            <picture class="main-banner__picture">
-                                <source srcset="images/content/main-banner/img_1_desk.jpg, images/content/main-banner/img_1_desk@2x.jpg 2x" media="(min-width: 768px)">
-                                <img src="images/content/main-banner/img_1_mob.jpg" srcset="images/content/main-banner/img_1_mob@2x.jpg 2x" alt="">
-                            </picture>
-                            <div class="main-banner__inner container light">
-                                <p class="h1">ТОВАР НЕДЕЛИ!<br> - 50% на все диски</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Iaculis elementum libero scelerisque porta</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-slider__nav-block container">
-                    <div class="main-slider__nav-dots"></div>
-                    <div class="main-slider__nav-nums"><span>01</span> / 04</div>
-                    <div class="main-slider__nav-arrows"></div>
-                </div>
-            </div>
-
-            <div class="title-block title-block--two_cols">
-                <div class="title-block__block">
-                    <h2>Популярные категории</h2>
-                </div>
-                <div class="title-block__block title-block__block--two_cols">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis elementum libero scelerisque porta</p>
-                    <p>
-                        <a class="forward-link" href="#">
-                            Смотреть все категории
-                            <svg>
-                                <use xlink:href="#arrow_right"></use>
-                            </svg>
-                        </a>
-                    </p>
-                </div>
+            <div class="title-block">
+                <h1>Каталог товаров</h1>
             </div>
 
             <div class="categories-grid">
@@ -582,43 +517,60 @@
                     </a>
                 </div>
                 <div class="categories-grid__item categories-grid__item--type_2">
-                    <div class="js-categories-slider categories-slider">
-                        <div>
-                            <a class="categories-grid__link" href="#">
-                                <img class="categories-grid__link-image" src="images/content/categories-grid/img_6.jpg" srcset="images/content/categories-grid/img_6@2x.jpg 2x" alt="">
-                                <span class="categories-grid__link-inner">
-                                    <span class="categories-grid__link-title">Кардиотренажеры</span>
-                                    <span class="categories-grid__link-text">Lorem ipsum dolor sit amet</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div>
-                            <a class="categories-grid__link" href="#">
-                                <img class="categories-grid__link-image" src="images/content/categories-grid/img_6.jpg" srcset="images/content/categories-grid/img_6@2x.jpg 2x" alt="">
-                                <span class="categories-grid__link-inner">
-                                    <span class="categories-grid__link-title">Кардиотренажеры</span>
-                                    <span class="categories-grid__link-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis fames ultrices lobortis sed turpis iaculis lectus.</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+                    <a class="categories-grid__link" href="#">
+                        <img class="categories-grid__link-image" src="images/content/categories-grid/img_6.jpg" srcset="images/content/categories-grid/img_6@2x.jpg 2x" alt="">
+                        <span class="categories-grid__link-inner">
+                            <span class="categories-grid__link-title">Кардиотренажеры</span>
+                            <span class="categories-grid__link-text">Lorem ipsum dolor sit amet</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="categories-grid__item">
+                    <a class="categories-grid__link" href="#">
+                        <img class="categories-grid__link-image" src="images/content/categories-grid/img_7.png" srcset="images/content/categories-grid/img_7.png 2x" alt="">
+                        <span class="categories-grid__link-inner">
+                            <span class="categories-grid__link-title">Игротека</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="categories-grid__item">
+                    <a class="categories-grid__link" href="#">
+                        <img class="categories-grid__link-image" src="images/content/categories-grid/img_8.png" srcset="images/content/categories-grid/img_8.png 2x" alt="">
+                        <span class="categories-grid__link-inner">
+                            <span class="categories-grid__link-title">Теннисные столы</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="categories-grid__item">
+                    <a class="categories-grid__link grey" href="#">
+                        <img class="categories-grid__link-image" src="images/content/categories-grid/img_9.png" srcset="images/content/categories-grid/img_9.png 2x" alt="">
+                        <span class="categories-grid__link-inner">
+                            <span class="categories-grid__link-title">Детские комплексы</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="categories-grid__item">
+                    <a class="categories-grid__link" href="#">
+                        <span class="categories-grid__link-inner">
+                            <span class="categories-grid__link-title">Не можете определиться<br> с выбором?</span>
+                            <span class="categories-grid__link-text">Помощь в подборе спортивного оборудования</span>
+                            <span class="forward-link">
+                                Узнать больше
+                                <svg>
+                                    <use xlink:href="#arrow_right"></use>
+                                </svg>
+                            </span>
+                        </span>
+                    </a>
                 </div>
             </div>
 
             <div class="title-block title-block--two_cols">
                 <div class="title-block__block">
-                    <h2>Хиты продаж</h2>
+                    <h2>Новинки</h2>
                 </div>
-                <div class="title-block__block title-block__block--two_cols">
+                <div class="title-block__block">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis elementum libero scelerisque porta</p>
-                    <p>
-                        <a class="forward-link" href="#">
-                            Перейти в каталог
-                            <svg>
-                                <use xlink:href="#arrow_right"></use>
-                            </svg>
-                        </a>
-                    </p>
                 </div>
             </div>
 
@@ -849,6 +801,196 @@
                                     </svg>
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item">
+                    <div class="catalog-item">
+                        <div class="catalog-item__picture">
+                            <span class="catalog-item__label red">%</span>
+                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item__info-block">
+                            <div class="catalog-item__info">
+                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                <p class="catalog-item__prices">
+                                    <span class="catalog-item__price">56 890 ₽</span>
+                                    <span class="catalog-item__old-price">72 890 ₽</span>
+                                </p>
+                            </div>
+                            <div class="catalog-item__buttons">
+                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                    <svg>
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                </a>
+                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                    <svg>
+                                        <use xlink:href="#compare"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item">
+                    <div class="catalog-item">
+                        <div class="catalog-item__picture">
+                            <span class="catalog-item__label red">%</span>
+                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item__info-block">
+                            <div class="catalog-item__info">
+                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                <p class="catalog-item__prices">
+                                    <span class="catalog-item__price">56 890 ₽</span>
+                                    <span class="catalog-item__old-price">72 890 ₽</span>
+                                </p>
+                            </div>
+                            <div class="catalog-item__buttons">
+                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                    <svg>
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                </a>
+                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                    <svg>
+                                        <use xlink:href="#compare"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item">
+                    <div class="catalog-item">
+                        <div class="catalog-item__picture">
+                            <span class="catalog-item__label red">%</span>
+                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item__info-block">
+                            <div class="catalog-item__info">
+                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                <p class="catalog-item__prices">
+                                    <span class="catalog-item__price">56 890 ₽</span>
+                                    <span class="catalog-item__old-price">72 890 ₽</span>
+                                </p>
+                            </div>
+                            <div class="catalog-item__buttons">
+                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                    <svg>
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                </a>
+                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                    <svg>
+                                        <use xlink:href="#compare"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item">
+                    <div class="catalog-item">
+                        <div class="catalog-item__picture">
+                            <span class="catalog-item__label red">%</span>
+                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item__info-block">
+                            <div class="catalog-item__info">
+                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                <p class="catalog-item__prices">
+                                    <span class="catalog-item__price">56 890 ₽</span>
+                                    <span class="catalog-item__old-price">72 890 ₽</span>
+                                </p>
+                            </div>
+                            <div class="catalog-item__buttons">
+                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                    <svg>
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                </a>
+                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                    <svg>
+                                        <use xlink:href="#compare"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item">
+                    <div class="catalog-item">
+                        <div class="catalog-item__picture">
+                            <span class="catalog-item__label red">%</span>
+                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item__info-block">
+                            <div class="catalog-item__info">
+                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                <p class="catalog-item__prices">
+                                    <span class="catalog-item__price">56 890 ₽</span>
+                                    <span class="catalog-item__old-price">72 890 ₽</span>
+                                </p>
+                            </div>
+                            <div class="catalog-item__buttons">
+                                <a class="catalog-item__button" href="#" title="Убрать из избранного">
+                                    <svg class="filled">
+                                        <use xlink:href="#fav_filled"></use>
+                                    </svg>
+                                </a>
+                                <a class="catalog-item__button" href="#" title="Убрать из сравнения">
+                                    <svg class="filled">
+                                        <use xlink:href="#compare"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item">
+                    <div class="catalog-item">
+                        <div class="catalog-item__picture">
+                            <span class="catalog-item__label red">%</span>
+                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item__info-block">
+                            <div class="catalog-item__info">
+                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                <p class="catalog-item__prices">
+                                    <span class="catalog-item__price">56 890 ₽</span>
+                                    <span class="catalog-item__old-price">72 890 ₽</span>
+                                </p>
+                            </div>
+                            <div class="catalog-item__buttons">
+                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                    <svg>
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                </a>
+                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                    <svg>
+                                        <use xlink:href="#compare"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-list__item catalog-list__item--type_1">
+                    <div class="catalog-item-big">
+                        <div class="catalog-item-big__picture">
+                            <img class="catalog-item-big__image" src="images/content/catalog-list/img_1.jpg" srcset="images/content/catalog-list/img_1@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                        </div>
+                        <div class="catalog-item-big__info-block">
+                            <p class="catalog-item-big__period">Сроки проведения акции с 1 апреля по 1 мая</p>
+                            <p class="catalog-item-big__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                            <p class="catalog-item-big__preview-text">Прочная несущая конструкция, а так же трехкомпонентный дисковый педальный узел</p>
+                            <p class="catalog-item-big__prices">
+                                <span class="catalog-item-big__price">56 890 ₽</span>
+                                <span class="catalog-item-big__old-price">72 890 ₽</span>
+                            </p>
                         </div>
                     </div>
                 </div>

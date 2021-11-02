@@ -56,6 +56,20 @@ h2,.h2
   @media(min-width: 1900px)
     font-size: 46px
 
+  .count
+    color: $red
+    font-family: 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 14px
+    font-weight: 400
+    text-transform: none
+    white-space: nowrap
+
+    @media(min-width: 1350px)
+      font-size: 16px
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
 h3,.h3
   font-size: 22px
   font-weight: 800
@@ -211,10 +225,18 @@ img
   padding-bottom: 5px
   text-transform: uppercase
   text-decoration: none
+  transition: color 0.3s, border-color 0.3s
   white-space: nowrap
+
+  &:hover
+    color: $blue
+
+    svg
+      fill: $blue
 
   svg
     fill: $red
     height: 14px
     margin-left: 12px
+    transition: fill 0.3s
     width: 14px

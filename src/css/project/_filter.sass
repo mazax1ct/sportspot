@@ -1,0 +1,41 @@
+.filter
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__top
+    border-top: 3px solid rgba($text-color, 0.2)
+    border-bottom: 3px solid rgba($text-color, 0.2)
+
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1350px)
+      padding-left: 40px
+      padding-right: 40px
+
+    @media(min-width: 1900px)
+      padding-left: 100px
+      padding-right: 100px
+
+  &__bottom
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 1350px)
+      padding-left: 40px
+      padding-right: 40px
+
+    @media(min-width: 1900px)
+      padding-left: 100px
+      padding-right: 100px

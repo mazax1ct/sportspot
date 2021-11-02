@@ -41,6 +41,7 @@
         width: 50%
 
   &__link
+    color: $text-color
     display: flex
     min-height: 300px
     overflow: hidden
@@ -71,7 +72,6 @@
 
     &.grey
       background-color: #F2F3F5
-      color: $blue
 
     &:hover
       .categories-grid__link-image
@@ -89,6 +89,15 @@
 
         svg
           fill: #fff
+
+      .forward-link
+        color: $blue
+
+        svg
+          fill: $blue
+
+    .forward-link
+      margin-top: auto
 
   &__link-image
     height: 100%
