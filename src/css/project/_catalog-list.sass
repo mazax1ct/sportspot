@@ -41,8 +41,12 @@
   flex-direction: column
   height: 100%
   position: relative
+  transition: box-shadow 0.3s
 
   &:hover
+    box-shadow: 0 0 10px 0 $text-color
+    z-index: 1
+
     .catalog-item__image
       transform: scale(1.02)
 
