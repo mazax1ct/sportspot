@@ -84,11 +84,17 @@
     transition: background-color 0.3s
 
     &.is-open
-      background-color: rgba($text-color, 0.1)
+      .catalog-menu__link
+        color: $red
+        
+      .catalog-menu__submenu-toggler
+        svg
+          fill: $red
 
   &__submenu-toggler
     align-items: center
     background-color: transparent
+    border-radius: 6px
     border: none
     cursor: pointer
     display: flex
@@ -105,16 +111,10 @@
     @media(min-width: 1900px)
       top: 3px
 
-    &.is-active
-      svg
-        @media(max-width: 767px)
-          transform: rotate(90deg)
-
     svg
       fill: $text-color
       height: 9px
-      transition: transform 0.3s
-      transform-origin: 50% 50% 0
+      transition: fill 0.3s
       width: 9px
 
   &__link
