@@ -195,9 +195,17 @@
                   d="M5.4375 14.5C5.4375 9.50321 9.50323 5.43748 14.5 5.43748C17.5747 5.43748 20.2878 6.98457 21.9271 9.33319L24.0404 6.16323C21.7129 3.50323 18.3038 1.81256 14.5 1.81256C7.50397 1.81256 1.81252 7.50407 1.81252 14.5H0L3.62498 19.9375L7.24996 14.5L5.4375 14.5Z" />
             </g>
         </symbol>
+        <symbol id="close" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M10.364 8.36415L16.021 2.7072C16.4115 2.31668 17.0447 2.31668 17.4352 2.7072C17.8257 3.09772 17.8257 3.73089 17.4352 4.12141L11.7782 9.77837L17.435 15.4352C17.8256 15.8257 17.8256 16.4589 17.435 16.8494C17.0445 17.2399 16.4113 17.2399 16.0208 16.8494L10.364 11.1926L4.70726 16.8493C4.31673 17.2399 3.68357 17.2399 3.29304 16.8493C2.90252 16.4588 2.90252 15.8256 3.29304 15.4351L8.9498 9.77837L3.29289 4.12146C2.90237 3.73093 2.90237 3.09777 3.29289 2.70725C3.68342 2.31672 4.31658 2.31672 4.70711 2.70725L10.364 8.36415Z" />
+        </symbol>
+        <symbol id="small_arrow_right" viewBox="0 0 9 9">
+            <path
+              d="M7.06482 4.50003C7.06482 4.66132 7.00324 4.8226 6.88032 4.94558L3.01048 8.81537C2.76431 9.06154 2.36519 9.06154 2.11912 8.81537C1.87305 8.5693 1.87305 8.17026 2.11912 7.92407L5.54337 4.50003L2.11924 1.07596C1.87317 0.82979 1.87317 0.430788 2.11924 0.184738C2.36531 -0.061551 2.76443 -0.061551 3.0106 0.184738L6.88044 4.05447C7.00338 4.17751 7.06482 4.33879 7.06482 4.50003Z" />
+        </symbol>
     </svg>
 
-    <header class="header compensate-scrollbar">
+    <header class="header compensate-scrollbar compensate-for-scrollbar">
         <div class="header__top">
             <div class="header__top-inner container">
                 <a class="header__logo" href="main.html">
@@ -350,6 +358,80 @@
             </div>
         </div>
     </header>
+
+    <div class="main-menu">
+        <nav class="main-menu__inner">
+            <button class="js-menu-closer main-menu__close" type="button">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <div class="main-menu__logo"><img src="images/logo.svg" alt="SPORTSPOT"></div>
+            <ul class="catalog-menu">
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="#">Кардиотренажеры</a>
+                    <button class="js-submenu-opener catalog-menu__submenu-toggler" type="button" data-menu="1">
+                        <svg>
+                            <use xlink:href="#small_arrow_right"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="#">Силовые тренажеры</a>
+                    <button class="js-submenu-opener catalog-menu__submenu-toggler" type="button" data-menu="2">
+                        <svg>
+                            <use xlink:href="#small_arrow_right"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Теннисные столы</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Детские городки и комплексы</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Велосипеды</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Игротека</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Массажное оборудование</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Бокс и единоборства</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Батуты</a></li>
+            </ul>
+            <ul class="service-menu">
+                <li><a class="service-menu__link" href="#">Акции</a></li>
+                <li><a class="service-menu__link" href="#">О компани</a></li>
+                <li><a class="service-menu__link" href="#">Доставка и оплата</a></li>
+                <li><a class="service-menu__link" href="#">Гарантия и сервис</a></li>
+                <li><a class="service-menu__link" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="catalog-submenu" data-menu="1">
+            <button class="js-submenu-closer catalog-submenu__close" type="button">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <p class="catalog-submenu__title">Кардиотренажеры</p>
+            <ul class="catalog-submenu__list">
+                <li><a href="#">Беговые дорожки</a></li>
+                <li><a href="#">Эллиптические тренажеры</a></li>
+                <li><a href="#">Велотренажеры</a></li>
+                <li><a href="#">Адаптивные тренажеры (АМТ)</a></li>
+                <li><a href="#">Гребные тренажеры</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+            </ul>
+        </div>
+        <div class="catalog-submenu" data-menu="2">
+            <button class="js-submenu-closer catalog-submenu__close" type="button">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <p class="catalog-submenu__title">Силовые тренажеры</p>
+            <ul class="catalog-submenu__list">
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+            </ul>
+        </div>
+    </div>
 
     <main class="page-content">
         <div class="container">
@@ -1077,9 +1159,15 @@
     <script src="js/inputmask-init.js"></script>
     
     <script src="js/video.js"></script>
+    
+    <script src="js/scroll-compensate.js"></script>
+    
     <script src="js/header.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/main-menu.js"></script>
+    
     <script src="js/main.js"></script>
+    
     <script src="js/footer-subscribe.js"></script>
     
     <script src="js/preloader.js"></script>

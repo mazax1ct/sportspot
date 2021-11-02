@@ -1,0 +1,233 @@
+.main-menu
+  bottom: 0
+  background-color: rgba($text-color, 0.5)
+  display: none
+  left: 0
+  overflow: hidden
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 10
+
+  &__inner
+    background-color: #fff
+    display: flex
+    flex-direction: column
+    height: 100%
+    overflow-y: auto
+    padding: 40px 20px 80px
+    transform: translateX(-100%)
+    transition: transform 0.3s
+
+    @media(min-width: 768px)
+      box-shadow: 0 0 3px 0 rgba($text-color, 0.5)
+      max-width: 360px
+      padding: 40px 40px 80px
+      position: relative
+      z-index: 2
+
+    @media(min-width: 1024px)
+      max-width: 440px
+      padding: 40px 60px
+
+    &.is-open
+      transform: translateX(0)
+
+  &__logo
+    margin-bottom: 40px
+
+  &__close
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 20px
+    top: 20px
+    width: 40px
+
+    @media(min-width: 768px)
+      display: none
+
+    svg
+      fill: $red
+      height: 20px
+      width: 20px
+
+.catalog-menu
+  font-weight: 700
+  list-style: none
+  margin-top: 0
+  margin-bottom: 40px
+  margin-left: -20px
+  margin-right: -20px
+  padding: 0
+
+  @media(min-width: 768px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1024px)
+    margin-left: -60px
+    margin-right: -60px
+
+  @media(min-width: 1900px)
+    font-size: 18px
+
+  &__item
+    position: relative
+    transition: background-color 0.3s
+
+    &.is-open
+      background-color: rgba($text-color, 0.1)
+
+  &__submenu-toggler
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 20px
+    top: 0
+    width: 40px
+    z-index: 1
+
+    @media(min-width: 1900px)
+      top: 3px
+
+    &.is-active
+      svg
+        @media(max-width: 767px)
+          transform: rotate(90deg)
+
+    svg
+      fill: $text-color
+      height: 9px
+      transition: transform 0.3s
+      transform-origin: 50% 50% 0
+      width: 9px
+
+  &__link
+    color: $text-color
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-left: 20px
+    padding-right: 60px
+    text-decoration: none
+
+    @media(min-width: 768px)
+      padding-left: 40px
+
+    @media(min-width: 1024px)
+      padding-left: 60px
+
+    &:hover
+      color: $red
+
+.service-menu
+  font-size: 14px
+  list-style: none
+  margin-top: auto
+  margin-bottom: 0
+  padding: 0
+
+  &__link
+    color: rgba($text-color, 0.5)
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+    text-decoration: none
+
+    &:hover
+      color: $text-color
+
+.catalog-submenu
+  background-color: #fff
+  height: 100%
+  left: 0
+  overflow-y: auto
+  position: fixed
+  padding: 40px 20px
+  top: 0
+  transition: transform 0.3s
+  transform: translateX(-100%)
+  width: 100%
+  z-index: 1
+
+  @media(min-width: 768px)
+    left: 360px
+    max-width: 360px
+    padding: 40px
+    transform: translateX(-200%)
+
+  @media(min-width: 1024px)
+    left: 440px
+    max-width: 440px
+
+  @media(min-width: 1900px)
+    padding-top: 27px
+
+  &.is-open
+    transform: translateX(0)
+
+  &__close
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 20px
+    top: 20px
+    width: 40px
+
+    @media(min-width: 768px)
+      display: none
+
+    svg
+      fill: $red
+      height: 20px
+      width: 20px
+
+  &__title
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 22px
+    font-weight: 800
+    margin-bottom: 35px
+
+    @media(min-width: 1350px)
+      font-size: 28px
+
+    @media(min-width: 1900px)
+      font-size: 32px
+
+  &__list
+    list-style: none
+    font-weight: 400
+    margin: 0
+    padding: 0
+
+    a
+      color: $text-color
+      display: block
+      padding-top: 10px
+      padding-bottom: 10px
+      text-decoration: none
+
+      &:hover
+        color: $red
