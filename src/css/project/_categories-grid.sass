@@ -47,6 +47,11 @@
     overflow: hidden
     position: relative
     text-decoration: none
+    transition: box-shadow 0.3s
+
+    &:hover
+      box-shadow: 0 0 10px 0 $text-color
+      z-index: 1
 
     @media(min-width: 1350px)
       min-height: 430px
@@ -180,6 +185,11 @@
   max-width: 100%
   overflow: hidden
   width: calc(100vw - 6px)
+  transition: box-shadow 0.3s
+
+  &:hover
+    box-shadow: 0 0 10px 0 $text-color
+    z-index: 1
 
   @media(min-width: 1024px)
     width: calc(50vw - 13px)

@@ -22,15 +22,18 @@
       border-color: $red
 
     .categories-menu__list-item
+      box-shadow: none
+      transition: box-shadow 0.3s
+
       &:hover
-        box-shadow: 0 0 10px 0 $text-color
+        box-shadow: 0 0 3px 0 rgba($text-color, 0.5)
         z-index: 1
 
     .categories-link
       background-color: $red
 
       &:hover
-        box-shadow: 0 0 10px 0 $red
+        box-shadow: none
 
         .categories-link__title
           color: #fff

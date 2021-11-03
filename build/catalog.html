@@ -203,6 +203,18 @@
             <path
               d="M7.06482 4.50003C7.06482 4.66132 7.00324 4.8226 6.88032 4.94558L3.01048 8.81537C2.76431 9.06154 2.36519 9.06154 2.11912 8.81537C1.87305 8.5693 1.87305 8.17026 2.11912 7.92407L5.54337 4.50003L2.11924 1.07596C1.87317 0.82979 1.87317 0.430788 2.11924 0.184738C2.36531 -0.061551 2.76443 -0.061551 3.0106 0.184738L6.88044 4.05447C7.00338 4.17751 7.06482 4.33879 7.06482 4.50003Z" />
         </symbol>
+        <symbol id="asc" viewBox=" 0 0 11 11">
+            <path
+              d="M0,2.5c0-0.4,0.3-0.8,0.8-0.8h2.5C3.7,1.8,4,2.1,4,2.5S3.7,3.3,3.3,3.3H0.8C0.3,3.3,0,2.9,0,2.5z M0,5.5c0-0.4,0.3-0.8,0.8-0.8h6.5C7.7,4.8,8,5.1,8,5.5S7.7,6.3,7.3,6.3H0.8C0.3,6.3,0,5.9,0,5.5z M0,8.5c0-0.4,0.3-0.8,0.8-0.8h9.5c0.4,0,0.8,0.3,0.8,0.8s-0.3,0.8-0.8,0.8H0.8C0.3,9.3,0,8.9,0,8.5z" />
+        </symbol>
+        <symbol id="desc" viewBox=" 0 0 11 11">
+            <path
+              d="M0.8,7.8h2.5C3.7,7.8,4,8.1,4,8.5S3.7,9.3,3.3,9.3H0.8C0.3,9.3,0,8.9,0,8.5C0,8.1,0.3,7.8,0.8,7.8z M0.8,4.8h6.5C7.7,4.8,8,5.1,8,5.5S7.7,6.3,7.3,6.3H0.8C0.3,6.3,0,5.9,0,5.5S0.3,4.8,0.8,4.8z M0.8,1.8h9.5c0.4,0,0.8,0.3,0.8,0.8s-0.3,0.8-0.8,0.8H0.8C0.3,3.3,0,2.9,0,2.5S0.3,1.8,0.8,1.8z" />
+        </symbol>
+        <symbol id="small_arrow_down" viewBox="0 0 20 20">
+            <path
+              d="M13.4181 7.85907C13.5482 7.73022 13.7239 7.65794 13.9071 7.65794C14.0902 7.65794 14.2659 7.73022 14.3961 7.85907C14.4603 7.92234 14.5113 7.99777 14.5462 8.08094C14.581 8.16412 14.5989 8.2534 14.5989 8.34357C14.5989 8.43375 14.581 8.52302 14.5462 8.6062C14.5113 8.68938 14.4603 8.7648 14.3961 8.82807L10.4881 12.6581C10.3576 12.7867 10.1818 12.8589 9.99856 12.8589C9.81534 12.8589 9.63949 12.7867 9.50906 12.6581L5.60106 8.82807C5.53681 8.7648 5.48578 8.68938 5.45096 8.6062C5.41613 8.52302 5.39819 8.43375 5.39819 8.34357C5.39819 8.2534 5.41613 8.16412 5.45096 8.08094C5.48578 7.99777 5.53681 7.92234 5.60106 7.85907C5.73119 7.73022 5.90692 7.65794 6.09006 7.65794C6.27319 7.65794 6.44892 7.73022 6.57906 7.85907L10.0001 11.0001L13.4181 7.85907Z" />
+        </symbol>
     </svg>
 
     <header class="header compensate-scrollbar compensate-for-scrollbar">
@@ -580,32 +592,53 @@
                         <use xlink:href="#arrow_left"></use>
                     </svg>
                 </button>
-                <ul class="categories-list__list">
-                    <li class="categories-list__item">
-                        <a class="categories-list__link is-active" href="#">Все категории</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Кардиотренажеры</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Силовые тренажеры</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Бокс и единоборства</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Велосипеды</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Массажное оборудование</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Тенисные столы</a>
-                    </li>
-                    <li class="categories-list__item">
-                        <a class="categories-list__link" href="#">Батуты</a>
-                    </li>
-                </ul>
+                <div class="js-scrooler categories-list__list">
+                    <div class="categories-list__item">
+                        <button class="categories-list__link is-active" type="button">Все категории</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Кардиотренажеры</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Силовые тренажеры</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Бокс и единоборства</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Велосипеды</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Массажное оборудование</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Тенисные столы</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Батуты</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Кардиотренажеры</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Силовые тренажеры</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Бокс и единоборства</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Велосипеды</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Массажное оборудование</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Тенисные столы</button>
+                    </div>
+                    <div class="categories-list__item">
+                        <button class="categories-list__link" type="button">Батуты</button>
+                    </div>
+                </div>
                 <button class="categories-list__button categories-list__button--next" type="button" title="Вперёд">
                     <svg>
                         <use xlink:href="#arrow_right"></use>
@@ -1315,6 +1348,7 @@
     </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    
     <script src="js/select2.full.min.js"></script>
     <script src="js/select2-addon.js"></script>
     
@@ -1338,6 +1372,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/main-slider.js"></script>
     <script src="js/categories-slider.js"></script>
+    <script src="js/scroller-min.js"></script>
     <script src="js/categories-list.js"></script>
 
 </body>

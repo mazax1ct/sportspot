@@ -31,8 +31,12 @@
 
 .article
   position: relative
+  transition: box-shadow 0.3s
 
   &:hover
+    box-shadow: 0 0 10px 0 $text-color
+    z-index: 1
+
     img
       transform: scale(1.02)
 
@@ -62,14 +66,19 @@
     margin-bottom: 15px
 
   &__title
+    color: $text-color
     font-size: 16px
     font-weight: 700
     margin-bottom: 10px
+    transition: color 0.3s
     text-transform: uppercase
 
     a
       color: $text-color
       text-decoration: none
+
+      &:hover
+        color: $red
 
       &::after
         bottom: 0

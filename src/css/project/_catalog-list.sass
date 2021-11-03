@@ -1,3 +1,7 @@
+.catalog-section
+  &:not(:last-child)
+    margin-bottom: 50px
+
 .catalog-list
   border-left: 3px solid $text-color
   border-top: 3px solid $text-color
@@ -42,10 +46,11 @@
   height: 100%
   position: relative
   transition: box-shadow 0.3s
+  z-index: 1
 
   &:hover
     box-shadow: 0 0 10px 0 $text-color
-    z-index: 1
+    z-index: 2
 
     .catalog-item__image
       transform: scale(1.02)
@@ -185,12 +190,16 @@
 .catalog-item-big
   height: 100%
   position: relative
+  transition: box-shadow 0.3s
 
   @media(min-width: 768px)
     display: flex
     flex-direction: row-reverse
 
   &:hover
+    box-shadow: 0 0 10px 0 $text-color
+    z-index: 1
+
     .catalog-item-big__image
       transform: scale(1.02)
 

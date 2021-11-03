@@ -203,6 +203,18 @@
             <path
               d="M7.06482 4.50003C7.06482 4.66132 7.00324 4.8226 6.88032 4.94558L3.01048 8.81537C2.76431 9.06154 2.36519 9.06154 2.11912 8.81537C1.87305 8.5693 1.87305 8.17026 2.11912 7.92407L5.54337 4.50003L2.11924 1.07596C1.87317 0.82979 1.87317 0.430788 2.11924 0.184738C2.36531 -0.061551 2.76443 -0.061551 3.0106 0.184738L6.88044 4.05447C7.00338 4.17751 7.06482 4.33879 7.06482 4.50003Z" />
         </symbol>
+        <symbol id="asc" viewBox=" 0 0 11 11">
+            <path
+              d="M0,2.5c0-0.4,0.3-0.8,0.8-0.8h2.5C3.7,1.8,4,2.1,4,2.5S3.7,3.3,3.3,3.3H0.8C0.3,3.3,0,2.9,0,2.5z M0,5.5c0-0.4,0.3-0.8,0.8-0.8h6.5C7.7,4.8,8,5.1,8,5.5S7.7,6.3,7.3,6.3H0.8C0.3,6.3,0,5.9,0,5.5z M0,8.5c0-0.4,0.3-0.8,0.8-0.8h9.5c0.4,0,0.8,0.3,0.8,0.8s-0.3,0.8-0.8,0.8H0.8C0.3,9.3,0,8.9,0,8.5z" />
+        </symbol>
+        <symbol id="desc" viewBox=" 0 0 11 11">
+            <path
+              d="M0.8,7.8h2.5C3.7,7.8,4,8.1,4,8.5S3.7,9.3,3.3,9.3H0.8C0.3,9.3,0,8.9,0,8.5C0,8.1,0.3,7.8,0.8,7.8z M0.8,4.8h6.5C7.7,4.8,8,5.1,8,5.5S7.7,6.3,7.3,6.3H0.8C0.3,6.3,0,5.9,0,5.5S0.3,4.8,0.8,4.8z M0.8,1.8h9.5c0.4,0,0.8,0.3,0.8,0.8s-0.3,0.8-0.8,0.8H0.8C0.3,3.3,0,2.9,0,2.5S0.3,1.8,0.8,1.8z" />
+        </symbol>
+        <symbol id="small_arrow_down" viewBox="0 0 20 20">
+            <path
+              d="M13.4181 7.85907C13.5482 7.73022 13.7239 7.65794 13.9071 7.65794C14.0902 7.65794 14.2659 7.73022 14.3961 7.85907C14.4603 7.92234 14.5113 7.99777 14.5462 8.08094C14.581 8.16412 14.5989 8.2534 14.5989 8.34357C14.5989 8.43375 14.581 8.52302 14.5462 8.6062C14.5113 8.68938 14.4603 8.7648 14.3961 8.82807L10.4881 12.6581C10.3576 12.7867 10.1818 12.8589 9.99856 12.8589C9.81534 12.8589 9.63949 12.7867 9.50906 12.6581L5.60106 8.82807C5.53681 8.7648 5.48578 8.68938 5.45096 8.6062C5.41613 8.52302 5.39819 8.43375 5.39819 8.34357C5.39819 8.2534 5.41613 8.16412 5.45096 8.08094C5.48578 7.99777 5.53681 7.92234 5.60106 7.85907C5.73119 7.73022 5.90692 7.65794 6.09006 7.65794C6.27319 7.65794 6.44892 7.73022 6.57906 7.85907L10.0001 11.0001L13.4181 7.85907Z" />
+        </symbol>
     </svg>
 
     <header class="header compensate-scrollbar compensate-for-scrollbar">
@@ -622,397 +634,1051 @@
                 <h2>Популярные товары в&nbsp;разделе <span class="count">1 150 товаров</span></h2>
             </div>
 
-            <div class="filter">
-                <div class="filter__top">Верх</div>
-                <div class="filter__bottom">Низ</div>
-            </div>
+            <div class="catalog-section">
+                <div class="filter">
+                    <div class="filter__top">
+                        <div class="filter__top-title">Фильтры:</div>
+                        <div class="filter__top-section">
+                            <button class="js-filter-section-toggler filter__top-button" type="button">
+                                Цена
+                                <svg>
+                                    <use xlink:href="#small_arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="filter__top-dropdown">
+                                <div class="price-inputs">
+                                    <div class="price-inputs__item">
+                                        <span class="price-inputs__item-title">от</span>
+                                        <input class="js-min price-input" type="text" placeholder="от 4900" value="4900">
+                                    </div>
+                                    <div class="price-inputs__item">
+                                        <span class="price-inputs__item-title">до</span>
+                                        <input class="js-max price-input" type="text" placeholder="до 28000" value="28000">
+                                    </div>
+                                </div>
+                                <input class="js-price-slider" type="text" name="price_range" value="" />
+                            </div>
+                        </div>
+                        <div class="filter__top-section">
+                            <button class="js-filter-section-toggler filter__top-button" type="button">
+                                Наличие
+                                <svg>
+                                    <use xlink:href="#small_arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="filter__top-dropdown">
+                                <div class="filter__list-outer">
+                                    <ul class="filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">В наличии</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Под заказ</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__top-section">
+                            <button class="js-filter-section-toggler filter__top-button" type="button">
+                                Производитель
+                                <svg>
+                                    <use xlink:href="#small_arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="filter__top-dropdown">
+                                <div class="filter__list-outer">
+                                    <ul class="filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" disabled />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Adidas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Alpin</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Длинныйбренддля проверки</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Ammity</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Atlas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AMF</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AppleGate</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Adidas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Alpin</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Altezani</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Ammity</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Atlas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AMF</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AppleGate</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__top-section">
+                            <button class="js-filter-section-toggler filter__top-button" type="button">
+                                Тип
+                                <svg>
+                                    <use xlink:href="#small_arrow_down"></use>
+                                </svg>
+                            </button>
+                            <div class="filter__top-dropdown">
+                                <div class="filter__list-outer">
+                                    <ul class="filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" disabled />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Тип 1</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Тип 2</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Тип 3</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Тип 4</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Тип 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="js-filter-opener filter-opener" type="button">
+                            <img src="images/icons/filter.svg" alt="">
+                            <span class="filter-opener__desktop">Больше фильтров</span>
+                            <span class="filter-opener__mobile">Фильтр</span>
+                        </button>
+                        <div class="filter__sort">
+                            <span class="filter__sort-title">Сортировать:</span>
+                            <label class="select-wrapper">
+                                <span class="select-wrapper__container">
+                                    <select class="js-sorting">
+                                        <option class="asc" value="1">По цене</option>
+                                        <option class="desc" value="2">По цене</option>
+                                        <option class="asc" value="3">По популярности</option>
+                                        <option class="desc" value="4">По популярности</option>
+                                        <option class="asc" value="5">По алфавиту</option>
+                                        <option class="desc" value="6">По алфавиту</option>
+                                    </select>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter__bottom">
+                        <div class="js-scrooler filter__resets">
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Цена:</span>
+                                <span class="filter-reset__text">От 12 000 ₽ до 50 000 ₽</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Производитель:</span>
+                                <span class="filter-reset__text">Adidas</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Производитель:</span>
+                                <span class="filter-reset__text">Vision</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Тип:</span>
+                                <span class="filter-reset__text">Вертикальный</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Система нагружения:</span>
+                                <span class="filter-reset__text">Колодочная</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Цена:</span>
+                                <span class="filter-reset__text">От 12 000 ₽ до 50 000 ₽</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Производитель:</span>
+                                <span class="filter-reset__text">Adidas</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Производитель:</span>
+                                <span class="filter-reset__text">Vision</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Тип:</span>
+                                <span class="filter-reset__text">Вертикальный</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Система нагружения:</span>
+                                <span class="filter-reset__text">Колодочная</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Цена:</span>
+                                <span class="filter-reset__text">От 12 000 ₽ до 50 000 ₽</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Производитель:</span>
+                                <span class="filter-reset__text">Adidas</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Производитель:</span>
+                                <span class="filter-reset__text">Vision</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Тип:</span>
+                                <span class="filter-reset__text">Вертикальный</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                            <button class="filter-reset" type="button" title="Убрать из фильтра">
+                                <span class="filter-reset__title">Система нагружения:</span>
+                                <span class="filter-reset__text">Колодочная</span>
+                                <svg>
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="filter-reset filter-reset--all" type="button">
+                            <span class="filter-reset__title">Сбросить все</span>
+                            <svg>
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="full-filter">
+                    <div class="full-filter__inner">
+                        <button class="js-filter-closer full-filter__close" type="button">
+                            <svg>
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <form action="">
+                            <p class="full-filter__title">Все фильтры</p>
+                            <div class="full-filter__section">
+                                <p class="full-filter__section-title">Цена</p>
+                                <div class="price-inputs">
+                                    <div class="price-inputs__item">
+                                        <span class="price-inputs__item-title">от</span>
+                                        <input class="js-min price-input" type="text" placeholder="от 4900" value="4900">
+                                    </div>
+                                    <div class="price-inputs__item">
+                                        <span class="price-inputs__item-title">до</span>
+                                        <input class="js-max price-input" type="text" placeholder="до 28000" value="28000">
+                                    </div>
+                                </div>
+                                <input class="js-price-slider" type="text" name="price_range" value="" />
+                            </div>
+                            <div class="full-filter__section">
+                                <p class="full-filter__section-title">Наличие</p>
+                                <div class="full-filter__list-outer">
+                                    <ul class="full-filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">В наличии</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Под заказ</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="full-filter__section">
+                                <p class="full-filter__section-title">Производитель</p>
+                                <div class="full-filter__list-outer">
+                                    <ul class="full-filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" disabled />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Adidas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Alpin</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Altezani</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Ammity</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Atlas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AMF</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AppleGate</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Adidas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Alpin</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Altezani</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Ammity</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Atlas</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AMF</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">AppleGate</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">BH Fitness</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="full-filter__section">
+                                <p class="full-filter__section-title">Ширина бегового полотна</p>
+                                <div class="full-filter__list-outer">
+                                    <ul class="full-filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">до 39 см</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">40 - 44 см</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">45 - 49 см</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">50 - 55 см</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">от 56 см</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="full-filter__section">
+                                <p class="full-filter__section-title">Система нагружения</p>
+                                <div class="full-filter__list-outer">
+                                    <ul class="full-filter__list">
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Система 1</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Система 2</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Система 3</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Система 4</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" />
+                                                <span class="checkbox-icon"></span>
+                                                <span class="checkbox-text">Система 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="full-filter__buttons">
+                                <button class="full-filter__apply" type="submit">
+                                    Фильтровать
+                                    <svg>
+                                        <use xlink:href="#arrow_right"></use>
+                                    </svg>
+                                </button>
+                                <button class="full-filter__reset" type="reset">
+                                    Сбросить всё
+                                    <svg>
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-            <div class="catalog-list">
-                <div class="catalog-list__item catalog-list__item--type_1">
-                    <div class="small-banner">
-                        <img class="small-banner__image" src="images/content/banners/img_3.jpg" srcset="images/content/banners/img_3@2x.jpg 2x" alt="">
-                        <div class="small-banner__inner light">
-                            <p class="small-banner__period">Сроки проведения акции с 1 апреля по 1 мая</p>
-                            <p class="small-banner__title h2">Закажите сейчас,<br> платите потом!</p>
-                            <p class="small-banner__preview-text">Покупайте товары в рассрочку и в кредит прямо на нашем сайте</p>
-                            <p class="small-banner__more-block">
-                                <a class="small-banner__more blue" href="#">
-                                    Узнать больше
-                                    <span class="arrow">
-                                        <svg>
-                                            <use xlink:href="#arrow_right"></use>
+                <div class="catalog-list">
+                    <div class="catalog-list__item catalog-list__item--type_1">
+                        <div class="small-banner">
+                            <img class="small-banner__image" src="images/content/banners/img_3.jpg" srcset="images/content/banners/img_3@2x.jpg 2x" alt="">
+                            <div class="small-banner__inner light">
+                                <p class="small-banner__period">Сроки проведения акции с 1 апреля по 1 мая</p>
+                                <p class="small-banner__title h2">Закажите сейчас,<br> платите потом!</p>
+                                <p class="small-banner__preview-text">Покупайте товары в рассрочку и в кредит прямо на нашем сайте</p>
+                                <p class="small-banner__more-block">
+                                    <a class="small-banner__more blue" href="#">
+                                        Узнать больше
+                                        <span class="arrow">
+                                            <svg>
+                                                <use xlink:href="#arrow_right"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Убрать из избранного">
+                                        <svg class="filled">
+                                            <use xlink:href="#fav_filled"></use>
                                         </svg>
-                                    </span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Убрать из избранного">
-                                    <svg class="filled">
-                                        <use xlink:href="#fav_filled"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Убрать из сравнения">
-                                    <svg class="filled">
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Убрать из избранного">
-                                    <svg class="filled">
-                                        <use xlink:href="#fav_filled"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Убрать из сравнения">
-                                    <svg class="filled">
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item">
-                    <div class="catalog-item">
-                        <div class="catalog-item__picture">
-                            <span class="catalog-item__label red">%</span>
-                            <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
-                        </div>
-                        <div class="catalog-item__info-block">
-                            <div class="catalog-item__info">
-                                <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
-                                <p class="catalog-item__prices">
-                                    <span class="catalog-item__price">56 890 ₽</span>
-                                    <span class="catalog-item__old-price">72 890 ₽</span>
-                                </p>
-                            </div>
-                            <div class="catalog-item__buttons">
-                                <a class="catalog-item__button" href="#" title="Добавить в избранное">
-                                    <svg>
-                                        <use xlink:href="#fav"></use>
-                                    </svg>
-                                </a>
-                                <a class="catalog-item__button" href="#" title="Добавить в сравнение">
-                                    <svg>
-                                        <use xlink:href="#compare"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-list__item catalog-list__item--type_1">
-                    <div class="small-banner">
-                        <img class="small-banner__image" src="images/content/banners/img_2.jpg" srcset="images/content/banners/img_2@2x.jpg 2x" alt="">
-                        <div class="small-banner__inner">
-                            <p class="small-banner__period">Сроки проведения акции с 1 апреля по 1 мая</p>
-                            <p class="small-banner__title h2">Сборка тренажеров<br> и оборудования</p>
-                            <p class="small-banner__preview-text">Осуществляем бесплатную доставку и сборку большинства приобретаемых тренажеров и велосипедов</p>
-                            <p class="small-banner__more-block">
-                                <a class="small-banner__more" href="#">
-                                    Узнать больше
-                                    <span class="arrow">
-                                        <svg>
-                                            <use xlink:href="#arrow_right"></use>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Убрать из сравнения">
+                                        <svg class="filled">
+                                            <use xlink:href="#compare"></use>
                                         </svg>
-                                    </span>
-                                </a>
-                            </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Убрать из избранного">
+                                        <svg class="filled">
+                                            <use xlink:href="#fav_filled"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Убрать из сравнения">
+                                        <svg class="filled">
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item">
+                        <div class="catalog-item">
+                            <div class="catalog-item__picture">
+                                <span class="catalog-item__label red">%</span>
+                                <img class="catalog-item__image" src="images/content/catalog-list/img_2.jpg" srcset="images/content/catalog-list/img_2@2x.jpg 2x" alt="Эллиптический эргометр Unixfit MV-500">
+                            </div>
+                            <div class="catalog-item__info-block">
+                                <div class="catalog-item__info">
+                                    <p class="catalog-item__title"><a href="#">Эллиптический эргометр Unixfit MV-500Эллиптический эргометр Unixfit MV-500</a></p>
+                                    <p class="catalog-item__prices">
+                                        <span class="catalog-item__price">56 890 ₽</span>
+                                        <span class="catalog-item__old-price">72 890 ₽</span>
+                                    </p>
+                                </div>
+                                <div class="catalog-item__buttons">
+                                    <a class="catalog-item__button" href="#" title="Добавить в избранное">
+                                        <svg>
+                                            <use xlink:href="#fav"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="catalog-item__button" href="#" title="Добавить в сравнение">
+                                        <svg>
+                                            <use xlink:href="#compare"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-list__item catalog-list__item--type_1">
+                        <div class="small-banner">
+                            <img class="small-banner__image" src="images/content/banners/img_2.jpg" srcset="images/content/banners/img_2@2x.jpg 2x" alt="">
+                            <div class="small-banner__inner">
+                                <p class="small-banner__period">Сроки проведения акции с 1 апреля по 1 мая</p>
+                                <p class="small-banner__title h2">Сборка тренажеров<br> и оборудования</p>
+                                <p class="small-banner__preview-text">Осуществляем бесплатную доставку и сборку большинства приобретаемых тренажеров и велосипедов</p>
+                                <p class="small-banner__more-block">
+                                    <a class="small-banner__more" href="#">
+                                        Узнать больше
+                                        <span class="arrow">
+                                            <svg>
+                                                <use xlink:href="#arrow_right"></use>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1439,6 +2105,7 @@
     </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    
     <script src="js/select2.full.min.js"></script>
     <script src="js/select2-addon.js"></script>
     
@@ -1460,6 +2127,9 @@
     <script src="js/preloader.js"></script>
 
     <script src="js/categories-menu.js"></script>
+    <script src="js/scroller-min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/filter.js"></script>
 
 </body>
 
