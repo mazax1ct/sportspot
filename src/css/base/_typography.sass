@@ -109,13 +109,10 @@ h5,.h5
 h6,.h6
   font-size: 14px
   font-weight: 700
-  margin-bottom: 10px
+  margin-bottom: 0
 
   @media(min-width: 1350px)
     font-size: 16px
-
-  @media(min-width: 1900px)
-    font-size: 18px
 
 p,
 ul,
@@ -142,26 +139,62 @@ p,
 
 table
   border-collapse: collapse
-  border: 1px solid
+  border: none
   max-width: 100%
   text-align: left
   width: 100%
 
   th,
   td
-    border: 1px solid
-    padding: 10px
+    border: none
+    padding: 8px
     vertical-align: top
+
+    @media(min-width: 1024px)
+      padding: 16px 20px
+
+  &.striped
+    tr
+      &:nth-child(odd)
+        background-color: #fff
+
+      &:nth-child(even)
+        background-color: #F2F3F5
 
 ol,
 ul
   list-style-position: inside
   padding: 0
 
+  &:not([class])
+    li
+      margin-bottom: 5px
+
 ol
   ul
     list-style: disc
     list-style-position: inside
+
+ol.small-red-numbers
+  li
+    margin-bottom: 5px
+
+    &::marker
+      color: $red
+      font-weight: 700
+
+ol.big-red-numbers
+  li
+    &::marker
+      color: $red
+      font-size: 20px
+      font-weight: 700
+
+      @media(min-width: 1350px)
+        font-size: 28px
+
+      @media(min-width: 1900px)
+        font-size: 36px
 
 img
   height: auto
@@ -249,3 +282,39 @@ img
     margin-left: 12px
     transition: fill 0.3s
     width: 14px
+
+.back-link
+  align-items: center
+  color: $red
+  display: inline-flex
+  font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+  font-weight: 700
+  padding-top: 5px
+  padding-bottom: 5px
+  text-transform: uppercase
+  text-decoration: none
+  transition: color 0.3s, border-color 0.3s
+  white-space: nowrap
+
+  &:hover
+    color: $blue
+
+    svg
+      fill: $blue
+
+  svg
+    fill: $red
+    height: 14px
+    margin-right: 12px
+    transition: fill 0.3s
+    width: 14px
+
+.required,
+.color-red
+  color: $red
+
+.text-block-940
+  max-width: 940px
+
+  &:not(:last-child)
+    margin-bottom: 20px

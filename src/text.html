@@ -28,6 +28,8 @@
 
     //= template/header.html
 
+    //= template/main-menu.html
+
     <main class="page-content">
         <div class="breadcrumbs">
             <ul class="breadcrumbs__list">
@@ -81,18 +83,33 @@
             <h5>Заголовок типа h5</h5>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода <span class="required">*</span></span>
                 <input class="input" type="text" value="" placeholder="текст..." />
             </label>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода <span class="required">*</span></span>
+                <input class="input error" type="text" value="" placeholder="текст..." />
+                <span class="input-label__error-text">ТЕКСТ ОШИБКИ</span>
+            </label>
+
+            <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
                 <input class="input" type="text" value="" placeholder="текст..." disabled />
             </label>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
+                <input class="input" type="text" value="Введённый текст" placeholder="текст..." disabled />
+            </label>
+
+            <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
                 <textarea class="textarea" placeholder="текст..."></textarea>
             </label>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
                 <textarea class="textarea" placeholder="текст..." disabled></textarea>
             </label>
 
@@ -139,27 +156,27 @@
             </label>
 
             <p>
-                <a class="btn btn--type_1" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_1" type="button">Нет я кнопка!</button>
-                <input class="btn btn--type_1" type="button" value="Акститесь!">
+                <a class="button button--type_1" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_1" type="button">Нет я кнопка!</button>
+                <input class="button button--type_1" type="button" value="Акститесь!">
             </p>
 
             <p>
-                <a class="btn btn--type_1 disabled" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_1" type="button" disabled>Нет я кнопка!</button>
-                <input class="btn btn--type_1" type="button" value="Акститесь!" disabled>
+                <a class="button button--type_1 disabled" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_1" type="button" disabled>Нет я кнопка!</button>
+                <input class="button button--type_1" type="button" value="Акститесь!" disabled>
             </p>
 
             <p>
-                <a class="btn btn--type_2" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_2" type="button">Нет я кнопка!</button>
-                <input class="btn btn--type_2" type="button" value="Акститесь!">
+                <a class="button button--type_2" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_2" type="button">Нет я кнопка!</button>
+                <input class="button button--type_2" type="button" value="Акститесь!">
             </p>
 
             <p>
-                <a class="btn btn--type_2 disabled" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_2" type="button" disabled>Нет я кнопка!</button>
-                <input class="btn btn--type_2" type="button" value="Акститесь!" disabled>
+                <a class="button button--type_2 disabled" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_2" type="button" disabled>Нет я кнопка!</button>
+                <input class="button button--type_2" type="button" value="Акститесь!" disabled>
             </p>
 
             <label class="select-wrapper">
@@ -174,10 +191,139 @@
                 </span>
             </label>
 
+            <h5>Табы</h5>
+
+            <div class="tabs">
+                <ul class="tabs-nav">
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button is-active" type="button" data-target="1">Характеристики</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="2">Описание товара</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="3">Инструкция по применению</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="4">Доставка и оплата</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="5">Как оформить рассрочку</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="6">Отзывы</button>
+                    </li>
+                </ul>
+                <div class="tab is-active" data-target="1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur reprehenderit ullam repudiandae veniam eum ratione provident maxime, illum, rerum inventore ducimus facere, tempore nesciunt. Voluptatibus voluptates
+                        inventore temporibus deleniti excepturi.</p>
+                </div>
+                <div class="tab" data-target="2">
+                    <p>Quis veritatis aspernatur similique, quas? Hic cupiditate, dolorum est nesciunt cumque vero, cum tempore temporibus quos deleniti, minus voluptates autem libero saepe.</p>
+                </div>
+                <div class="tab" data-target="3">
+                    <p>Mollitia repellendus vitae modi corporis quia, tempore explicabo ad iste voluptas doloribus ab incidunt eius eveniet quae pariatur, tempora, quis voluptatum eligendi?</p>
+                </div>
+                <div class="tab" data-target="4">
+                    <p>Tempore nulla blanditiis reprehenderit consequuntur expedita in iure esse maiores obcaecati voluptatibus maxime cupiditate, adipisci commodi quas quasi id minima cum. Placeat.</p>
+                </div>
+                <div class="tab" data-target="5">
+                    <p>Saepe repellat, id iure officia. Nihil incidunt possimus reprehenderit consequuntur non recusandae natus harum necessitatibus praesentium voluptates. Atque earum in, hic iusto!</p>
+                </div>
+                <div class="tab" data-target="6">
+                    <p>Officia, aspernatur, consequatur. Labore ullam quisquam odit, placeat iste consequuntur est consectetur laboriosam dolor debitis. Veniam earum nisi inventore! Corporis, similique, repellendus.</p>
+                </div>
+            </div>
+
+            <h5>Аккордионы</h5>
+
+            <div class="accordion">
+                <button class="accordion__toggler" type="button">
+                    Общие характеристики
+                    <svg>
+                        <use xlink:href="#arrow_right"></use>
+                    </svg>
+                </button>
+                <div class="accordion__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolore natus ea illo dicta debitis consequuntur impedit voluptatem ipsam vitae, libero rem quo soluta architecto nam est amet? Laudantium, nulla.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion__toggler" type="button">
+                    Повехность для бега (полотно)
+                    <svg>
+                        <use xlink:href="#arrow_right"></use>
+                    </svg>
+                </button>
+                <div class="accordion__body accordion__body--type_1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolore natus ea illo dicta debitis consequuntur impedit voluptatem ipsam vitae, libero rem quo soluta architecto nam est amet? Laudantium, nulla.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion__toggler" type="button">
+                    Компьютер (интерфейс пользователя)
+                    <svg>
+                        <use xlink:href="#arrow_right"></use>
+                    </svg>
+                </button>
+                <div class="accordion__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolore natus ea illo dicta debitis consequuntur impedit voluptatem ipsam vitae, libero rem quo soluta architecto nam est amet? Laudantium, nulla.</p>
+                </div>
+            </div>
+
+            <h5>Полосатый список в 2 колонки</h5>
+
+            <ul class="striped-list striped-list--2_columns">
+                <li>
+                    <b>Производитель</b>
+                    <span>CardioPower</span>
+                </li>
+                <li>
+                    <b>Тип</b>
+                    <span>Электрическая</span>
+                </li>
+                <li>
+                    <b>Использование</b>
+                    <span>Домашнее</span>
+                </li>
+                <li>
+                    <b>Конструкция</b>
+                    <span>Складная</span>
+                </li>
+                <li>
+                    <b>Мощность двигателя (л.с.)</b>
+                    <span>2.0</span>
+                </li>
+                <li>
+                    <b>Пиковая мощность двигателя (л.с.)</b>
+                    <span>нет</span>
+                </li>
+                <li>
+                    <b>Минимальная скорость движения (км/ч)</b>
+                    <span>1</span>
+                </li>
+                <li>
+                    <b>Максимальная скорость движения (км/ч)</b>
+                    <span>14</span>
+                </li>
+                <li>
+                    <b>Питание</b>
+                    <span>сеть 220 Вольт</span>
+                </li>
+                <li>
+                    <b>Гарантия производителя</b>
+                    <span>24 месяца</span>
+                </li>
+                <li>
+                    <b>Родина бренда</b>
+                    <span>Германия</span>
+                </li>
+            </ul>
+
             <h6>Заголовок типа h6</h6>
 
             <div class="responsive-table">
-                <table>
+                <table class="striped">
                     <tr>
                         <th>Заголовок таблицы</th>
                         <th>Заголовок таблицы</th>
@@ -250,6 +396,8 @@
     //= template/footer.html
 
     //= template/float_bar.html
+
+    //= template/modals.html
 
     //= template/scripts.html
 </body>

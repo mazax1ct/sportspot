@@ -1,0 +1,47 @@
+.accordion
+  &__toggler
+    align-items: center
+    border: none
+    border-bottom: 3px solid $text-color
+    background-color: transparent
+    cursor: pointer
+    display: flex
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 16px
+    font-weight: 800
+    padding: 8px 0
+    text-align: left
+    text-transform: uppercase
+    width: 100%
+
+    @media(min-width: 1350px)
+      font-size: 28px
+
+    @media(min-width: 1900px)
+      font-size: 32px
+
+    svg
+      fill: $red
+      height: 20px
+      margin-left: 20px
+      min-width: 20px
+      transition: transform 0.3s
+      width: 20px
+
+    &.is-active
+      svg
+        transform: rotate(-90deg)
+
+  &__body
+    display: none
+    padding-top: 24px
+    padding-bottom: 24px
+
+    &--type_1
+      background-color: #F2F3F5
+      padding-left: 12px
+      padding-right: 12px
+      
+      @media(min-width: 1024px)
+        padding-left: 24px
+        padding-right: 24px

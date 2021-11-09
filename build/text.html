@@ -231,28 +231,43 @@
                     <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
                 </ul>
                 <div class="header__location-block">
-                    <button class="header__location-button" type="button">
-                        <svg>
-                            <use xlink:href="#pin"></use>
-                        </svg>
-                        <span>Санкт-Петербург</span>
-                    </button>
+                    <div class="location">
+                        <button class="js-location-toggler location__toggler" type="button">
+                            <svg>
+                                <use xlink:href="#pin"></use>
+                            </svg>
+                            <span>Санкт-Петербург</span>
+                        </button>
+                        <div class="location__dropdown">
+                            <ul class="location__list">
+                                <li class="location__list-item">
+                                    <button class="location__button is-active" type="button">Санкт-Петербург</button>
+                                </li>
+                                <li class="location__list-item">
+                                    <button class="location__button" type="button">Москва</button>
+                                </li>
+                                <li class="location__list-item">
+                                    <button class="location__button" type="button">Петропавловск-Камчатский</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="header__phone-block">
                     <a class="header__phone" href="tel:+78123098128">8 812 309-81-28</a>
                 </div>
                 <div class="header__top-links">
-                    <a class="header__top-link" href="tel:+78123098128" title="Позвонить нам">
+                    <a class="header__top-link" href="javascript:void(0)" title="Обратный звонок" data-fancybox="recall" data-src="#recall">
                         <svg>
                             <use xlink:href="#phone"></use>
                         </svg>
                     </a>
-                    <a class="header__top-link" href="#" title="Мы в WhatsApp">
+                    <a class="header__top-link" href="#" title="Мы в WhatsApp" target="_blank" rel="nofollow noreferrer noreferrer">
                         <svg>
                             <use xlink:href="#whatsapp"></use>
                         </svg>
                     </a>
-                    <a class="header__top-link" href="#" title="Мы в Telegram">
+                    <a class="header__top-link" href="#" title="Мы в Telegram" target="_blank" rel="nofollow noreferrer noreferrer">
                         <svg>
                             <use xlink:href="#tg"></use>
                         </svg>
@@ -371,6 +386,101 @@
         </div>
     </header>
 
+    <div class="main-menu">
+        <nav class="main-menu__inner">
+            <button class="js-menu-closer main-menu__close" type="button">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <div class="main-menu__logo"><img src="images/logo.svg" alt="SPORTSPOT"></div>
+            <ul class="catalog-menu">
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="#">Кардиотренажеры</a>
+                    <button class="js-submenu-opener catalog-menu__submenu-toggler" type="button" data-menu="1">
+                        <svg>
+                            <use xlink:href="#small_arrow_right"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="#">Силовые тренажеры</a>
+                    <button class="js-submenu-opener catalog-menu__submenu-toggler" type="button" data-menu="2">
+                        <svg>
+                            <use xlink:href="#small_arrow_right"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Теннисные столы</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Детские городки и комплексы</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Велосипеды</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Игротека</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Массажное оборудование</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Бокс и единоборства</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Батуты</a></li>
+            </ul>
+            <ul class="service-menu">
+                <li><a class="service-menu__link" href="#">Акции</a></li>
+                <li><a class="service-menu__link" href="#">О компани</a></li>
+                <li><a class="service-menu__link" href="#">Доставка и оплата</a></li>
+                <li><a class="service-menu__link" href="#">Гарантия и сервис</a></li>
+                <li><a class="service-menu__link" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="catalog-submenu" data-menu="1">
+            <button class="js-submenu-closer catalog-submenu__close" type="button">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <p class="catalog-submenu__title">Кардиотренажеры</p>
+            <ul class="catalog-submenu__list">
+                <li><a href="#">Беговые дорожки</a></li>
+                <li><a href="#">Эллиптические тренажеры</a></li>
+                <li><a href="#">Велотренажеры</a></li>
+                <li><a href="#">Адаптивные тренажеры (АМТ)</a></li>
+                <li><a href="#">Гребные тренажеры</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+            </ul>
+        </div>
+        <div class="catalog-submenu" data-menu="2">
+            <button class="js-submenu-closer catalog-submenu__close" type="button">
+                <svg>
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+            <p class="catalog-submenu__title">Силовые тренажеры</p>
+            <ul class="catalog-submenu__list">
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+                <li><a href="#">Степперы и министепперы</a></li>
+                <li><a href="#">Горнолыжные тренажеры</a></li>
+                <li><a href="#">Аксессуары для тренажеров</a></li>
+            </ul>
+        </div>
+    </div>
+
     <main class="page-content">
         <div class="breadcrumbs">
             <ul class="breadcrumbs__list">
@@ -424,18 +534,33 @@
             <h5>Заголовок типа h5</h5>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода <span class="required">*</span></span>
                 <input class="input" type="text" value="" placeholder="текст..." />
             </label>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода <span class="required">*</span></span>
+                <input class="input error" type="text" value="" placeholder="текст..." />
+                <span class="input-label__error-text">ТЕКСТ ОШИБКИ</span>
+            </label>
+
+            <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
                 <input class="input" type="text" value="" placeholder="текст..." disabled />
             </label>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
+                <input class="input" type="text" value="Введённый текст" placeholder="текст..." disabled />
+            </label>
+
+            <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
                 <textarea class="textarea" placeholder="текст..."></textarea>
             </label>
 
             <label class="input-label">
+                <span class="input-label__text">Лейбл для поля ввода</span>
                 <textarea class="textarea" placeholder="текст..." disabled></textarea>
             </label>
 
@@ -482,27 +607,27 @@
             </label>
 
             <p>
-                <a class="btn btn--type_1" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_1" type="button">Нет я кнопка!</button>
-                <input class="btn btn--type_1" type="button" value="Акститесь!">
+                <a class="button button--type_1" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_1" type="button">Нет я кнопка!</button>
+                <input class="button button--type_1" type="button" value="Акститесь!">
             </p>
 
             <p>
-                <a class="btn btn--type_1 disabled" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_1" type="button" disabled>Нет я кнопка!</button>
-                <input class="btn btn--type_1" type="button" value="Акститесь!" disabled>
+                <a class="button button--type_1 disabled" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_1" type="button" disabled>Нет я кнопка!</button>
+                <input class="button button--type_1" type="button" value="Акститесь!" disabled>
             </p>
 
             <p>
-                <a class="btn btn--type_2" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_2" type="button">Нет я кнопка!</button>
-                <input class="btn btn--type_2" type="button" value="Акститесь!">
+                <a class="button button--type_2" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_2" type="button">Нет я кнопка!</button>
+                <input class="button button--type_2" type="button" value="Акститесь!">
             </p>
 
             <p>
-                <a class="btn btn--type_2 disabled" href="javascript:void(0)">Я кнопка!</a>
-                <button class="btn btn--type_2" type="button" disabled>Нет я кнопка!</button>
-                <input class="btn btn--type_2" type="button" value="Акститесь!" disabled>
+                <a class="button button--type_2 disabled" href="javascript:void(0)">Я кнопка!</a>
+                <button class="button button--type_2" type="button" disabled>Нет я кнопка!</button>
+                <input class="button button--type_2" type="button" value="Акститесь!" disabled>
             </p>
 
             <label class="select-wrapper">
@@ -517,10 +642,139 @@
                 </span>
             </label>
 
+            <h5>Табы</h5>
+
+            <div class="tabs">
+                <ul class="tabs-nav">
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button is-active" type="button" data-target="1">Характеристики</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="2">Описание товара</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="3">Инструкция по применению</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="4">Доставка и оплата</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="5">Как оформить рассрочку</button>
+                    </li>
+                    <li class="tabs-nav__item">
+                        <button class="tabs-nav__button" type="button" data-target="6">Отзывы</button>
+                    </li>
+                </ul>
+                <div class="tab is-active" data-target="1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur reprehenderit ullam repudiandae veniam eum ratione provident maxime, illum, rerum inventore ducimus facere, tempore nesciunt. Voluptatibus voluptates
+                        inventore temporibus deleniti excepturi.</p>
+                </div>
+                <div class="tab" data-target="2">
+                    <p>Quis veritatis aspernatur similique, quas? Hic cupiditate, dolorum est nesciunt cumque vero, cum tempore temporibus quos deleniti, minus voluptates autem libero saepe.</p>
+                </div>
+                <div class="tab" data-target="3">
+                    <p>Mollitia repellendus vitae modi corporis quia, tempore explicabo ad iste voluptas doloribus ab incidunt eius eveniet quae pariatur, tempora, quis voluptatum eligendi?</p>
+                </div>
+                <div class="tab" data-target="4">
+                    <p>Tempore nulla blanditiis reprehenderit consequuntur expedita in iure esse maiores obcaecati voluptatibus maxime cupiditate, adipisci commodi quas quasi id minima cum. Placeat.</p>
+                </div>
+                <div class="tab" data-target="5">
+                    <p>Saepe repellat, id iure officia. Nihil incidunt possimus reprehenderit consequuntur non recusandae natus harum necessitatibus praesentium voluptates. Atque earum in, hic iusto!</p>
+                </div>
+                <div class="tab" data-target="6">
+                    <p>Officia, aspernatur, consequatur. Labore ullam quisquam odit, placeat iste consequuntur est consectetur laboriosam dolor debitis. Veniam earum nisi inventore! Corporis, similique, repellendus.</p>
+                </div>
+            </div>
+
+            <h5>Аккордионы</h5>
+
+            <div class="accordion">
+                <button class="accordion__toggler" type="button">
+                    Общие характеристики
+                    <svg>
+                        <use xlink:href="#arrow_right"></use>
+                    </svg>
+                </button>
+                <div class="accordion__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolore natus ea illo dicta debitis consequuntur impedit voluptatem ipsam vitae, libero rem quo soluta architecto nam est amet? Laudantium, nulla.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion__toggler" type="button">
+                    Повехность для бега (полотно)
+                    <svg>
+                        <use xlink:href="#arrow_right"></use>
+                    </svg>
+                </button>
+                <div class="accordion__body accordion__body--type_1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolore natus ea illo dicta debitis consequuntur impedit voluptatem ipsam vitae, libero rem quo soluta architecto nam est amet? Laudantium, nulla.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion__toggler" type="button">
+                    Компьютер (интерфейс пользователя)
+                    <svg>
+                        <use xlink:href="#arrow_right"></use>
+                    </svg>
+                </button>
+                <div class="accordion__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolore natus ea illo dicta debitis consequuntur impedit voluptatem ipsam vitae, libero rem quo soluta architecto nam est amet? Laudantium, nulla.</p>
+                </div>
+            </div>
+
+            <h5>Полосатый список в 2 колонки</h5>
+
+            <ul class="striped-list striped-list--2_columns">
+                <li>
+                    <b>Производитель</b>
+                    <span>CardioPower</span>
+                </li>
+                <li>
+                    <b>Тип</b>
+                    <span>Электрическая</span>
+                </li>
+                <li>
+                    <b>Использование</b>
+                    <span>Домашнее</span>
+                </li>
+                <li>
+                    <b>Конструкция</b>
+                    <span>Складная</span>
+                </li>
+                <li>
+                    <b>Мощность двигателя (л.с.)</b>
+                    <span>2.0</span>
+                </li>
+                <li>
+                    <b>Пиковая мощность двигателя (л.с.)</b>
+                    <span>нет</span>
+                </li>
+                <li>
+                    <b>Минимальная скорость движения (км/ч)</b>
+                    <span>1</span>
+                </li>
+                <li>
+                    <b>Максимальная скорость движения (км/ч)</b>
+                    <span>14</span>
+                </li>
+                <li>
+                    <b>Питание</b>
+                    <span>сеть 220 Вольт</span>
+                </li>
+                <li>
+                    <b>Гарантия производителя</b>
+                    <span>24 месяца</span>
+                </li>
+                <li>
+                    <b>Родина бренда</b>
+                    <span>Германия</span>
+                </li>
+            </ul>
+
             <h6>Заголовок типа h6</h6>
 
             <div class="responsive-table">
-                <table>
+                <table class="striped">
                     <tr>
                         <th>Заголовок таблицы</th>
                         <th>Заголовок таблицы</th>
@@ -695,7 +949,7 @@
         </div>
     </footer>
 
-    <div class="float-bar compensate-scrollbar">
+    <div class="float-bar compensate-scrollbar compensate-for-scrollbar">
         <a class="float-bar__link" href="#">
             <span class="float-bar__link-icon">
                 <svg>
@@ -733,6 +987,27 @@
         </a>
     </div>
 
+    <div id="recall" class="popup">
+        <p class="popup__title">Нужна помощь?<br> Наш менеджер вам позвонит</p>
+        <form action="">
+            <label class="input-label">
+                <span class="input-label__text">ИМЯ<span class="required">*</span></span>
+                <input class="input" type="text" value="" placeholder="Начните вводить ваше имя" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ТЕЛЕФОН<span class="required">*</span></span>
+                <input class="js-phone-mask input" type="text" value="" placeholder="+7 (999) 999 99 99" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ПОЖЕЛАНИЯ</span>
+                <textarea class="textarea" placeholder="Опишите здесь Ваши проблемы или вопросы..."></textarea>
+            </label>
+            <div class="popup__button-block">
+                <button class="button button--type_1" type="submit">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+        </form>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     
     <script src="js/select2.full.min.js"></script>
@@ -746,12 +1021,20 @@
     <script src="js/scroll-compensate.js"></script>
     
     <script src="js/header.js"></script>
+    <script src="js/location.js"></script>
     <script src="js/search.js"></script>
     <script src="js/main-menu.js"></script>
     
     <script src="js/main.js"></script>
     
     <script src="js/footer-subscribe.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    
     
     <script src="js/preloader.js"></script>
 </body>

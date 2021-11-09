@@ -1,0 +1,60 @@
+.tabs-nav
+  align-items: center
+  display: flex
+  list-style: none
+  margin-bottom: 24px
+  overflow-x: auto
+  overflow-y: hidden
+  padding: 0
+  scrollbar-width: thin
+  scrollbar-color: rgba($text-color, 0.3) rgba($text-color, 0.1)
+
+  &::-webkit-scrollbar
+    height: 6px
+    width: 6px
+
+  &::-webkit-scrollbar-track
+    background-color: rgba($text-color, 0.1)
+
+  &::-webkit-scrollbar-thumb
+    background: rgba($text-color, 0.3)
+    width: 6px
+
+  @media(min-width: 1024px)
+    margin-bottom: 48px
+
+  &__item
+    &:not(:last-child)
+      margin-right: 16px
+
+      @media(min-width: 1350px)
+        margin-right: 24px
+
+  &__button
+    background-color: #fff
+    border: 3px solid $text-color
+    border-radius: 20px
+    cursor: pointer
+    font-size: 14px
+    height: 40px
+    padding: 10px 24px
+    transition: background-color 0.3s, color 0.3s
+    white-space: nowrap
+
+    &:hover,
+    &:focus
+      background-color: rgba($text-color, 0.1)
+
+    &.is-active
+      background-color: $text-color
+      color: #fff
+
+.tab
+  display: none
+
+  &--type_1
+    background-color: #F2F3F5
+    padding: 24px
+
+  &.is-active
+    display: block

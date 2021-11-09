@@ -231,28 +231,43 @@
                     <li class="top-menu__item"><a class="top-menu__link" href="#">Контакты</a></li>
                 </ul>
                 <div class="header__location-block">
-                    <button class="header__location-button" type="button">
-                        <svg>
-                            <use xlink:href="#pin"></use>
-                        </svg>
-                        <span>Санкт-Петербург</span>
-                    </button>
+                    <div class="location">
+                        <button class="js-location-toggler location__toggler" type="button">
+                            <svg>
+                                <use xlink:href="#pin"></use>
+                            </svg>
+                            <span>Санкт-Петербург</span>
+                        </button>
+                        <div class="location__dropdown">
+                            <ul class="location__list">
+                                <li class="location__list-item">
+                                    <button class="location__button is-active" type="button">Санкт-Петербург</button>
+                                </li>
+                                <li class="location__list-item">
+                                    <button class="location__button" type="button">Москва</button>
+                                </li>
+                                <li class="location__list-item">
+                                    <button class="location__button" type="button">Петропавловск-Камчатский</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="header__phone-block">
                     <a class="header__phone" href="tel:+78123098128">8 812 309-81-28</a>
                 </div>
                 <div class="header__top-links">
-                    <a class="header__top-link" href="tel:+78123098128" title="Позвонить нам">
+                    <a class="header__top-link" href="javascript:void(0)" title="Обратный звонок" data-fancybox="recall" data-src="#recall">
                         <svg>
                             <use xlink:href="#phone"></use>
                         </svg>
                     </a>
-                    <a class="header__top-link" href="#" title="Мы в WhatsApp">
+                    <a class="header__top-link" href="#" title="Мы в WhatsApp" target="_blank" rel="nofollow noreferrer noreferrer">
                         <svg>
                             <use xlink:href="#whatsapp"></use>
                         </svg>
                     </a>
-                    <a class="header__top-link" href="#" title="Мы в Telegram">
+                    <a class="header__top-link" href="#" title="Мы в Telegram" target="_blank" rel="nofollow noreferrer noreferrer">
                         <svg>
                             <use xlink:href="#tg"></use>
                         </svg>
@@ -2066,7 +2081,7 @@
         </div>
     </footer>
 
-    <div class="float-bar compensate-scrollbar">
+    <div class="float-bar compensate-scrollbar compensate-for-scrollbar">
         <a class="float-bar__link" href="#">
             <span class="float-bar__link-icon">
                 <svg>
@@ -2104,6 +2119,27 @@
         </a>
     </div>
 
+    <div id="recall" class="popup">
+        <p class="popup__title">Нужна помощь?<br> Наш менеджер вам позвонит</p>
+        <form action="">
+            <label class="input-label">
+                <span class="input-label__text">ИМЯ<span class="required">*</span></span>
+                <input class="input" type="text" value="" placeholder="Начните вводить ваше имя" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ТЕЛЕФОН<span class="required">*</span></span>
+                <input class="js-phone-mask input" type="text" value="" placeholder="+7 (999) 999 99 99" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ПОЖЕЛАНИЯ</span>
+                <textarea class="textarea" placeholder="Опишите здесь Ваши проблемы или вопросы..."></textarea>
+            </label>
+            <div class="popup__button-block">
+                <button class="button button--type_1" type="submit">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+        </form>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     
     <script src="js/select2.full.min.js"></script>
@@ -2117,12 +2153,20 @@
     <script src="js/scroll-compensate.js"></script>
     
     <script src="js/header.js"></script>
+    <script src="js/location.js"></script>
     <script src="js/search.js"></script>
     <script src="js/main-menu.js"></script>
     
     <script src="js/main.js"></script>
     
     <script src="js/footer-subscribe.js"></script>
+    
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/fancybox-defaults.js"></script>
+    
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    
     
     <script src="js/preloader.js"></script>
 
