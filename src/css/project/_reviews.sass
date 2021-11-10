@@ -3,4 +3,61 @@
   padding: 20px 40px
 
   &__author
+    align-items: center
     display: flex
+    margin-bottom: 8px
+
+  &__author-avatar
+    min-width: 90px
+    width: 90px
+
+    img
+      border-radius: 50%
+
+  &__author-info
+    padding-left: 16px
+
+  &__author-name
+    font-size: 22px
+    font-weight: 700
+    margin-top: 0
+    margin-bottom: 0
+
+    @media(min-width: 1350px)
+      font-size: 28px
+
+    @media(min-width: 1900px)
+      font-size: 32px
+
+  &__author-age-block
+    align-items: center
+    display: flex
+
+  &__author-age
+    font-weight: 500
+    margin-right: 24px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+  &__author-rating
+    align-items: center
+    display: flex
+
+    svg
+      fill: $red
+      height: 18px
+      margin-right: 8px
+      width: 18px
+
+  &__ordered-item
+    color: $red
+    margin-bottom: 15px
+
+  &__text
+    a
+      color: $text-color
+
+      &:hover,
+      &:focus
+        color: $red
