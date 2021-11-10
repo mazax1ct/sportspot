@@ -41,6 +41,26 @@
       background-color: #fff
       color: $text-color
 
+  &--type_3
+    background-color: transparent
+    border: 2px solid $red
+    color: $red
+
+    &:hover,
+    &:focus
+      background-color: $red
+      color: #fff
+
+  &--type_4
+    background-color: transparent
+    border: 2px solid $text-color
+    color: $text-color
+
+    &:hover,
+    &:focus
+      background-color: $text-color
+      color: #fff
+
   &:disabled,
   &.disabled
     pointer-events: none
@@ -48,3 +68,123 @@
 
     &:focus
       outline: none
+
+.round-button
+  align-items: center
+  border: 3px solid
+  border-radius: 23px
+  background-color: transparent
+  cursor: pointer
+  display: inline-flex
+  font-family: 'GT Eesti Pro Display', Arial, sans-serif
+  font-size: 14px
+  height: 46px
+  justify-content: center
+  line-height: 1.5
+  padding: 8px 30px
+  position: relative
+  text-decoration: none
+  text-align: center
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s
+  vertical-align: middle
+  z-index: 1
+
+  @media(min-width: 1024px)
+    font-size: 16px
+
+  &--type_1
+    border-color: $red
+    color: $red
+
+    svg
+      fill: $red
+
+    &:hover,
+    &:focus
+      background-color: $red
+      color: #fff
+
+      svg
+        fill: #fff
+
+  &--type_2
+    border-color: $text-color
+    color: $text-color
+
+    svg
+      fill: $text-color
+
+    &:hover,
+    &:focus
+      background-color: $text-color
+      color: #fff
+
+      svg
+        fill: #fff
+
+  &--type_3
+    background-color: $red
+    border-color: $red
+    color: #fff
+
+    svg
+      fill: #fff
+
+    &:hover,
+    &:focus
+      background-color: $blue
+      border-color: $blue
+      color: #fff
+
+      svg
+        fill: #fff
+
+  &--type_4
+    border-color: #fff
+    color: #fff
+
+    svg
+      fill: #fff
+
+    &:hover,
+    &:focus
+      background-color: $blue
+      border-color: $blue
+      color: #fff
+
+      svg
+        fill: #fff
+
+  &--type_5
+    border-color: $red
+    color: $text-color
+
+    svg
+      fill: $text-color
+
+    &:hover,
+    &:focus
+      background-color: $red
+      color: #fff
+
+      svg
+        fill: #fff
+
+  &:disabled,
+  &.disabled
+    pointer-events: none
+    opacity: 0.5
+
+    &:focus
+      outline: none
+
+  svg
+    height: 24px
+    transition: fill 0.3s
+    width: 24px
+
+    &:first-child
+      margin-right: 10px
+
+    &:last-child
+      margin-left: 10px

@@ -1,5 +1,351 @@
+.title-block + .detail
+  @media(max-width: 1349px)
+    margin-top: -20px
+
 .detail
   margin-bottom: 40px
-  
-  @media(min-width: 1024px)
+
+  @media(min-width: 1350px)
+    display: flex
+    justify-content: space-between
     margin-bottom: 80px
+
+  &__left
+    @media(min-width: 1350px)
+      width: calc(100% - 400px)
+
+  &__right
+    @media(min-width: 1350px)
+      padding-left: 40px
+      min-width: 400px
+      width: 400px
+
+    @media(min-width: 1600px)
+      padding-left: 20px
+
+  &__labels
+    display: flex
+    margin-bottom: 16px
+
+    @media(min-width: 1024px)
+      padding-left: 80px
+
+    @media(min-width: 1900px)
+      padding-left: 140px
+
+  &__label
+    align-items: center
+    border-radius: 23px
+    color: #fff
+    display: inline-flex
+    font-size: 16px
+    font-weight: 700
+    height: 46px
+    padding: 8px 16px
+    text-transform: uppercase
+
+    @media(min-width: 1350px)
+      padding-left: 24px
+      padding-right: 24px
+
+    &:not(:last-child)
+      margin-right: 16px
+
+    &--type_1
+      background: linear-gradient(90.05deg, #AA161D 0.05%, #F15454 99.96%)
+
+    &--type_2
+      background: linear-gradient(90.05deg, #4DC9E6 0.05%, #210CAE 99.96%)
+
+    svg
+      fill: #fff
+      height: 24px
+      margin-right: 10px
+      width: 24px
+
+  &__top
+    margin-bottom: 30px
+
+    @media(min-width: 1900px)
+      margin-bottom: 120px
+
+  &__top-inner
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      display: flex
+
+  &__images-block
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 50%
+
+    @media(min-width: 1024px)
+      align-items: flex-start
+      display: flex
+      max-width: 660px
+      margin-bottom: 0
+
+    @media(min-width: 1350px)
+      width: 56%
+
+  &__slider
+    border: 3px solid $text-color
+    margin-bottom: 20px
+
+    @media(min-width: 1024px)
+      margin-bottom: 0
+      order: 2
+      width: calc(100% - 80px)
+
+    @media(min-width: 1900px)
+      width: calc(100% - 140px)
+
+    img
+      display: block
+      width: 100%
+
+  &__thumbs
+    @media(min-width: 1024px)
+      margin-right: 20px
+      order: 1
+      width: 60px
+
+    @media(min-width: 1900px)
+      margin-top: -11px
+      margin-bottom: -11px
+      margin-right: 35px
+      width: 105px
+
+    img
+      border: 3px solid $text-color
+      margin-left: auto
+      margin-right: auto
+      opacity: 0.4
+
+    .slick-slide
+      @media(min-width: 1024px)
+        padding-bottom: 11px
+        padding-top: 11px
+
+    .slick-current
+      img
+        border-color: $red
+        opacity: 1
+
+    .slick-arrow
+      align-items: center
+      background-color: transparent
+      border: 3px solid $text-color
+      cursor: pointer
+      display: flex
+      height: 48px
+      justify-content: center
+      left: 50%
+      padding: 0
+      position: absolute
+      transform: translateX(-50%)
+      width: 48px
+      z-index: 1
+
+      svg
+        fill: $text-color
+        height: 18px
+        width: 18px
+
+    .slick-prev
+      top: -48px
+
+    .slick-next
+      top: 100%
+
+  &__top-info
+    max-width: 460px
+
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      margin-left: 20px
+
+    @media(min-width: 1900px)
+      margin-left: 35px
+
+    .expert
+      margin-bottom: 24px
+
+  &__short-text
+    color: rgba($text-color, 0.8)
+    margin-bottom: 24px
+
+  &__artikul-block
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-bottom: 24px
+
+  &__artikul
+    margin-bottom: 0
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+  &__rating
+    align-items: center
+    display: flex
+
+    svg
+      fill: $red
+      height: 20px
+      margin-right: 10px
+      width: 20px
+
+  &__top-buttons
+    display: flex
+    justify-content: space-between
+    margin-top: auto
+
+    .round-button
+      padding-left: 16px
+      padding-right: 16px
+
+      @media(max-width: 1599px)
+        font-size: 12px
+
+      svg
+        height: 16px
+        width: 16px
+
+  &__mobile-sidebar
+    @media(min-width: 1350px)
+      display: none
+
+  &__side-bar
+    display: none
+
+    @media(min-width: 1350px)
+      display: block
+      position: sticky
+      top: 160px
+
+    .detail__price-block
+      justify-content: space-between
+
+    .detail__action
+      font-size: 12px
+
+    .detail__credit
+      a
+        margin-left: auto
+
+  &__price-block
+    align-items: baseline
+    display: flex
+    margin-bottom: 15px
+    text-transform: uppercase
+
+  &__price
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 28px
+    font-weight: 800
+    line-height: 1.25
+    margin-right: 24px
+
+    @media(min-width: 1350px)
+      font-size: 38px
+
+    @media(min-width: 1900px)
+      font-size: 46px
+
+  &__old-price
+    color: rgba($text-color, 0.4)
+    text-decoration: line-through
+
+  &__buy-block
+    margin-bottom: 24px
+
+    .button
+      width: 100%
+
+  &__actions
+    display: flex
+    margin-bottom: 20px
+
+  &__action
+    align-items: center
+    border: 3px solid $red
+    color: $text-color
+    display: flex
+    flex-grow: 1
+    font-size: 11px
+    height: 48px
+    justify-content: center
+    padding: 8px
+    transition: background-color 0.3s, color 0.3s
+    text-decoration: none
+
+    @media(min-width: 768px)
+      font-size: 14px
+
+    &:hover,
+    &:focus
+      background-color: $red
+      color: #fff
+
+      svg
+        fill: #fff
+
+    &:not(:last-child)
+      border-right: none
+
+    svg
+      fill: $text-color
+      height: 16px
+      margin-right: 8px
+      transition: fill 0.3s
+      width: 16px
+
+  &__credit-delivery
+    margin-bottom: 30px
+
+  &__credit
+    align-items: center
+    display: flex
+    margin-bottom: 16px
+
+    a
+      color: $text-color
+      margin-left: 24px
+
+      &:hover,
+      &:focus
+        color: $red
+
+  &__credit-icon
+    align-items: center
+    border-radius: 50%
+    background-color: $red
+    color: #fff
+    display: flex
+    font-weight: 700
+    height: 28px
+    justify-content: center
+    margin-right: 10px
+    width: 28px
+
+  &__delivery
+    align-items: center
+    display: flex
+    margin-bottom: 16px
+
+  &__delivery-icon
+    align-items: center
+    border-radius: 50%
+    background-color: $text-color
+    display: flex
+    font-weight: 700
+    height: 28px
+    justify-content: center
+    margin-right: 10px
+    width: 28px

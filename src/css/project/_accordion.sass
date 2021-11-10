@@ -32,6 +32,20 @@
       svg
         transform: rotate(-90deg)
 
+    &--small
+      font-weight: 700
+      
+      @media(min-width: 1350px)
+        font-size: 18px
+
+      @media(min-width: 1900px)
+        font-size: 20px
+
+      svg
+        height: 14px
+        margin-left: 16px
+        width: 14px
+
   &__body
     display: none
     padding-top: 24px
@@ -41,7 +55,13 @@
       background-color: #F2F3F5
       padding-left: 12px
       padding-right: 12px
-      
+
       @media(min-width: 1024px)
         padding-left: 24px
         padding-right: 24px
+
+    &--type_2
+      background-color: $red
+      color: #fff
+      font-size: 10px
+      padding: 12px

@@ -1,0 +1,70 @@
+.expert
+  background-color: $red
+  color: #fff
+  max-width: 460px
+  padding: 12px
+
+  @media(min-width: 1024px)
+    padding-left: 16px
+    padding-right: 16px
+    padding-bottom: 24px
+
+  &__person
+    display: flex
+    margin-bottom: 16px
+
+    @media(min-width: 1024px)
+      margin-bottom: 24px
+
+  &__avatar
+    min-width: 90px
+    width: 90px
+
+    img
+      border-radius: 50%
+
+  &__info
+    padding-left: 16px
+
+  &__title
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 0
+    text-transform: uppercase
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+  &__name
+    font-weight: 500
+    margin-bottom: 6px
+
+  &__rating
+    align-items: center
+    display: flex
+    margin-bottom: 0
+
+    svg
+      fill: #fff
+      height: 18px
+      margin-right: 8px
+      width: 18px
+
+  &__bottom
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+    .round-button
+      padding-left: 16px
+      padding-right: 16px
+
+  &__phone
+    color: #fff
+    font-size: 18px
+    font-weight: 700
+    text-decoration: none
+
+    @media(min-width: 1900px)
+      font-size: 24px
