@@ -318,3 +318,28 @@ img
 
   &:not(:last-child)
     margin-bottom: 20px
+
+.columns_2
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    margin-left: -20px
+    margin-right: -20px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__column
+    @media(min-width: 768px)
+      padding-left: 20px
+      padding-right: 20px
+      width: 50%
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+      @media(min-width: 768px)
+        margin-bottom: 0

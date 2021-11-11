@@ -1282,6 +1282,59 @@
             </div>
         </form>
     </div>
+    
+    <div id="add_review" class="popup">
+        <p class="popup__title">Ваш отзыв</p>
+        <form action="">
+            <div class="rating">
+                <button class="rating__button is-active" type="button" title="Оценка 1">
+                    <svg>
+                        <use xlink:href="#star_full"></use>
+                    </svg>
+                </button>
+                <button class="rating__button" type="button" title="Оценка 2">
+                    <svg>
+                        <use xlink:href="#star_full"></use>
+                    </svg>
+                </button>
+                <button class="rating__button" type="button" title="Оценка 3">
+                    <svg>
+                        <use xlink:href="#star_full"></use>
+                    </svg>
+                </button>
+                <button class="rating__button" type="button" title="Оценка 4">
+                    <svg>
+                        <use xlink:href="#star_full"></use>
+                    </svg>
+                </button>
+                <button class="rating__button" type="button" title="Оценка 5">
+                    <svg>
+                        <use xlink:href="#star_full"></use>
+                    </svg>
+                </button>
+            </div>
+            <input id="rating_value" type="hidden">
+            <label class="input-label">
+                <span class="input-label__text">ИМЯ<span class="required">*</span></span>
+                <input class="input" type="text" value="" placeholder="Начните вводить ваше имя" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ТЕЛЕФОН<span class="required">*</span></span>
+                <input class="js-phone-mask input" type="text" value="" placeholder="+7 (999) 999 99 99" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ГОРОД<span class="required">*</span></span>
+                <input class="input" type="text" value="" placeholder="Начните вводить название города" />
+            </label>
+            <label class="input-label">
+                <span class="input-label__text">ОТЗЫВ</span>
+                <textarea class="textarea" placeholder="Опишите здесь Ваши пожелания и впечатления о товаре..."></textarea>
+            </label>
+            <div class="popup__button-block">
+                <button class="button button--type_1" type="submit">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     
@@ -1308,7 +1361,10 @@
     <script src="js/fancybox-defaults.js"></script>
     
     <script src="js/tabs.js"></script>
+    
     <script src="js/accordion.js"></script>
+    
+    <script src="js/rating.js"></script>
 
     <script src="js/slick.min.js"></script>
     <script src="js/main-slider.js"></script>

@@ -48,3 +48,9 @@ $(document).ready(function() {
     });
   }
 });
+
+$(document).on('click', '.js-refresh-reviews', function () {
+  if($('.js-reviews-slider').length) {
+    $('.js-reviews-slider').slick('setPosition');
+  }
+});

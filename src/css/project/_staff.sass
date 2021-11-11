@@ -1,0 +1,29 @@
+.staff
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__item
+    @media(min-width: 768px)
+      width: 50%
+
+    @media(min-width: 1024px)
+      width: 25%
+
+    img
+      object-fit: cover
+      width: 100%

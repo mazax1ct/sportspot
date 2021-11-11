@@ -1,0 +1,80 @@
+.infographic-2
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__list
+    border-left: 3px solid $text-color
+    border-top: 3px solid $text-color
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    margin-left: -20px
+    margin-right: -20px
+    padding: 0
+
+    @media(min-width: 1350px)
+      margin-left: -40px
+      margin-right: -40px
+
+    @media(min-width: 1900px)
+      margin-left: -100px
+      margin-right: -100px
+
+  &__list-item
+    border-right: 3px solid $text-color
+    border-bottom: 3px solid $text-color
+    display: flex
+    width: 100%
+
+    @media(min-width: 768px)
+      width: 50%
+
+    @media(min-width: 1024px)
+      width: 25%
+
+    @media(min-width: 1900px)
+      min-height: 165px
+
+  &__text-block
+    align-self: center
+    flex-grow: 1
+    max-width: calc(100% - 60px)
+    padding: 20px
+
+    @media(min-width: 1900px)
+      max-width: calc(100% - 110px)
+      padding: 15px 40px
+
+  &__title
+    color: $text-color
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 14px
+    font-weight: 700
+    margin-bottom: 16px
+    position: relative
+    transition: color 0.3s
+    text-transform: uppercase
+
+    @media(min-width: 1350px)
+      font-size: 16px
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+  &__icon-block
+    align-items: center
+    border-left: 3px solid $text-color
+    display: flex
+    justify-content: center
+    min-width: 60px
+    width: 60px
+
+    @media(min-width: 1900px)
+      min-width: 110px
+      width: 110px
+
+    img
+      max-width: 30px
+
+      @media(min-width: 1900px)
+        max-width: 50px

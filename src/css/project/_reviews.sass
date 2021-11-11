@@ -1,6 +1,75 @@
+.reviews
+  @media(min-width: 768px)
+    padding-right: 60px
+
+  @media(min-width: 1900px)
+    padding-right: 100px
+
+  .slick-track
+    display: flex
+
+  .slick-slide
+    height: auto
+
+    .review
+      height: 100%
+
+  .slick-arrow
+    align-items: center
+    border: 3px solid $text-color
+    background-color: $red
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    opacity: 0.5
+    padding: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    transition: background-color 0.3s
+    width: 40px
+    z-index: 1
+
+    @media(min-width: 768px)
+      border: none
+      height: 50%
+      opacity: 1
+      transform: none
+      width: 60px
+
+    @media(min-width: 1900px)
+      width: 100px
+
+    &:hover,
+    &:focus
+      background-color: $blue
+
+    svg
+      fill: #fff
+      height: 20px
+      width: 20px
+
+  .slick-prev
+    left: 0
+
+    @media(min-width: 768px)
+      height: calc(50% - 1px)
+      left: auto
+      right: 0
+      top: 0
+
+  .slick-next
+    left: auto
+    right: 0
+
 .review
   border: 3px solid $text-color
-  padding: 20px 40px
+  padding: 20px
+
+  @media(min-width: 768px)
+    padding-left: 40px
+    padding-right: 40px
 
   &__author
     align-items: center
@@ -8,8 +77,12 @@
     margin-bottom: 8px
 
   &__author-avatar
-    min-width: 90px
-    width: 90px
+    min-width: 60px
+    width: 60px
+
+    @media(min-width: 1350px)
+      min-width: 90px
+      width: 90px
 
     img
       border-radius: 50%
@@ -36,6 +109,7 @@
   &__author-age
     font-weight: 500
     margin-right: 24px
+    white-space: nowrap
 
     @media(min-width: 1900px)
       font-size: 18px
@@ -61,3 +135,93 @@
       &:hover,
       &:focus
         color: $red
+
+.reviews-slider
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 768px)
+    padding-right: 60px
+
+  @media(min-width: 1350px)
+    margin-left: -40px
+    margin-right: -40px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+    padding-right: 100px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  .slick-track
+    display: flex
+
+  .slick-slide
+    height: auto
+
+    .review
+      height: 100%
+
+  .review
+    @media(min-width: 1350px)
+      border-right: none
+
+  .slick-arrow
+    align-items: center
+    border: 3px solid $text-color
+    background-color: $red
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    opacity: 0.5
+    padding: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    transition: background-color 0.3s
+    width: 40px
+    z-index: 1
+
+    @media(min-width: 768px)
+      border: none
+      height: 50%
+      opacity: 1
+      transform: none
+      width: 60px
+
+    @media(min-width: 1900px)
+      width: 100px
+
+    &:hover,
+    &:focus
+      background-color: $blue
+
+    svg
+      fill: #fff
+      height: 20px
+      width: 20px
+
+  .slick-prev
+    left: 0
+
+    @media(min-width: 768px)
+      height: calc(50% - 1px)
+      left: auto
+      right: -60px
+      top: 0
+
+    @media(min-width: 1900px)
+      right: -100px
+
+  .slick-next
+    left: auto
+    right: 0
+
+    @media(min-width: 768px)
+      right: -60px
+
+    @media(min-width: 1900px)
+      right: -100px
