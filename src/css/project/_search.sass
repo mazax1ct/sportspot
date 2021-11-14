@@ -1,0 +1,66 @@
+.search
+  display: flex
+  max-width: 850px
+  margin-bottom: 50px
+  position: relative
+
+  &__input
+    border-width: 3px
+    border-color: $text-color
+
+  &__button
+    border: 3px solid $text-color
+    border-left: none
+    height: 54px
+    width: 270px
+
+  &__dropdown
+    background-color: #fff
+    border: 3px solid $text-color
+    border-top: none
+    box-shadow: 0 0 3px 0 rgba($text-color, 0.3)
+    display: none
+    left: 0
+    position: absolute
+    top: 100%
+    width: 100%
+    z-index: 1
+
+    &.is-active
+      display: block
+      z-index: 3
+
+  &__dropdown-list
+    list-style: none
+    margin: 0
+    max-height: 190px
+    padding: 0
+    overflow-y: auto
+    scrollbar-width: thin
+    scrollbar-color: rgba($text-color, 0.3) rgba($text-color, 0.1)
+
+    &::-webkit-scrollbar
+      height: 6px
+      width: 6px
+
+    &::-webkit-scrollbar-track
+      background-color: rgba($text-color, 0.1)
+
+    &::-webkit-scrollbar-thumb
+      background: rgba($text-color, 0.3)
+      width: 6px
+
+  &__dropdown-option
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: block
+    min-height: 40px
+    padding: 4px 16px
+    text-align: left
+    transition: background-color 0.3s
+    width: 100%
+
+    &:hover,
+    &:focus
+      background-color: rgba($text-color, 0.2)

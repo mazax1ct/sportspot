@@ -1,0 +1,83 @@
+.about-logistic
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  @media(min-width: 1024px)
+    background-repeat: no-repeat
+    background-position: 100% 100%
+    background-size: auto 100%
+    background-image: url('../images/backgrounds/about-logistic/map.svg')
+    position: relative
+
+  &__text-block
+    max-width: 720px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+  &__text
+    @media(min-width: 1024px) and (max-width: 1349px)
+      max-width: 60%
+
+  &__offices
+    background-color: $red
+    color: #fff
+    font-size: 14px
+    font-weight: 700
+    max-width: 370px
+    padding: 40px
+
+    @media(min-width: 1024px)
+      bottom: 0
+      left: auto
+      position: absolute
+      right: 0
+      top: auto
+      z-index: 1
+
+    .forward-link
+      border-color: #fff
+      color: #fff
+
+      svg
+        fill: #fff
+
+  &__info
+    @media(min-width: 768px) and (max-width: 1023px)
+      display: flex
+      margin-left: -10px
+      margin-right: -10px
+
+  &__info-block
+    align-items: center
+    display: flex
+    font-size: 14px
+    margin-top: 40px
+    max-width: 325px
+
+    @media(min-width: 768px) and (max-width: 1023px)
+      padding-left: 10px
+      padding-right: 10px
+
+  &__info-num
+    color: $red
+    font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
+    font-size: 32px
+    font-weight: 800
+    line-height: 1.25
+    margin-bottom: 0
+    padding-right: 10px
+    white-space: nowrap
+
+    @media(min-width: 1400px)
+      font-size: 38px
+      padding-right: 24px
+
+    @media(min-width: 1600px)
+      font-size: 46px
+
+  &__button-block
+    margin-top: 40px
+
+    @media(min-width: 1024px)
+      margin-top: 60px
