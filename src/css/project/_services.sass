@@ -1,0 +1,66 @@
+.services
+  margin-left: auto
+  margin-right: auto
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  @media(min-width: 600px)
+    display: flex
+    flex-wrap: wrap
+    max-width: 1420px
+
+  &__item
+    margin-bottom: 20px
+
+    @media(min-width: 600px)
+      display: flex
+      padding-left: 10px
+      padding-right: 10px
+      width: 50%
+
+.service
+  border: 3px solid $text-color
+  height: 100%
+  line-height: 1.1875
+  padding: 10px
+  width: 100%
+
+  @media(min-width: 1024px)
+    padding: 20px
+
+  @media(min-width: 1200px)
+    display: flex
+
+  &__image
+    margin-bottom: 10px
+
+    @media(min-width: 1200px)
+      margin-bottom: 0
+
+    img
+      display: block
+      width: 100%
+
+    @media(min-width: 1200px)
+      min-width: 200px
+      width: 200px
+
+    @media(min-width: 1350px)
+      min-width: 260px
+      width: 260px
+
+  &__text-block
+    @media(min-width: 1200px)
+      padding-left: 10px
+
+  &__title
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 5px
+
+    @media(min-width: 1350px)
+      font-size: 20px
+
+    @media(min-width: 1900px)
+      font-size: 24px

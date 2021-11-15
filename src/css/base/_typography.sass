@@ -320,15 +320,32 @@ img
 .color-red
   color: $red
 
+.text-block-860
+  max-width: 860px
+
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  &--type_1
+    margin-left: auto
+    margin-right: auto
+
 .text-block-940
   max-width: 940px
 
   &:not(:last-child)
     margin-bottom: 20px
 
+  &--type_1
+    margin-left: auto
+    margin-right: auto
+
 .columns
   @media(min-width: 1024px)
     display: flex
+
+  &:not(:last-child)
+    margin-bottom: 50px
 
   &__big
     margin-bottom: 40px
@@ -351,6 +368,10 @@ img
     display: flex
     margin-left: -20px
     margin-right: -20px
+
+  &--type_1
+    @media(min-width: 768px)
+      align-items: flex-start
 
   &:not(:last-child)
     margin-bottom: 50px

@@ -1,0 +1,115 @@
+.specialists
+  @media(min-width: 1200px)
+    display: flex
+    margin-left: -10px
+    margin-right: -10px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__item
+    margin-bottom: 10px
+    
+    @media(min-width: 1200px)
+      padding-left: 10px
+      padding-right: 10px
+      width: 50%
+
+.spec
+  background-color: $red
+  color: #fff
+  padding: 12px
+
+  @media(min-width: 1024px)
+    padding-left: 16px
+    padding-right: 16px
+    padding-bottom: 24px
+
+  @media(min-width: 1900px)
+    padding: 30px
+
+  &__person
+    align-items: center
+    display: flex
+
+  &__avatar
+    min-width: 90px
+    width: 90px
+
+    @media(min-width: 1350px)
+      min-width: 140px
+      width: 140px
+
+    img
+      border-radius: 50%
+      display: block
+      width: 100%
+
+  &__info
+    flex-grow: 1
+    padding-left: 16px
+
+    @media(min-width: 1900px)
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+  &__info-inner
+    margin-bottom: 16px
+
+    @media(min-width: 1900px)
+      padding-right: 16px
+      margin-bottom: 0
+
+  &__name
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 0
+
+    @media(min-width: 1200px)
+      font-size: 20px
+
+    @media(min-width: 1350px)
+      font-size: 28px
+
+    @media(min-width: 1900px)
+      font-size: 36px
+
+  &__place
+    font-size: 14px
+    margin-bottom: 5px
+
+  &__speciality
+    margin-bottom: 5px
+
+    @media(min-width: 1200px)
+      font-size: 18px
+
+    @media(min-width: 1350px)
+      font-size: 22px
+
+  &__links
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+
+  &__link
+    color: #fff
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 5px
+    text-decoration: none
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+    &:not(:last-child)
+      margin-right: 10px
+
+      @media(min-width: 1900px)
+        margin-right: 20px
+
+  .round-button
+    padding-left: 16px
+    padding-right: 16px
+    width: 200px

@@ -540,7 +540,6 @@
                     <p>Посмотреть выставку и приобрести понравившийся вам тренажёр вы можете по адресу: Санкт-Петербург, пересечение улиц Шамшева (дом 14) и Малого проспекта Петроградской стороны! Ждем Вас по будням с 10 до 20 и выходным с 11 до 18.
                     </p>
                     <p>СКИДКИ и ЦЕННЫЕ ПОДАРКИ ГАРАНТИРУЮТСЯ</p>
-
                     <h2>Наши филиалы</h2>
                     <div class="accordion">
                         <button class="accordion__toggler" type="button">
@@ -663,11 +662,11 @@
                             </label>
                             <label class="input-label">
                                 <span class="input-label__text">Телефон <span class="required">*</span></span>
-                                <input class="input" type="text" value="" />
+                                <input class="js-phone-mask input" type="text" value="" />
                             </label>
                             <label class="input-label">
                                 <span class="input-label__text">Почта <span class="required">*</span></span>
-                                <input class="input" type="text" value="" />
+                                <input class="js-email-mask input" type="text" value="" />
                             </label>
                             <label class="input-label">
                                 <span class="input-label__text">Сообщение</span>
@@ -677,6 +676,40 @@
                                 <button class="button button--type_4" type="submit">Отправить</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts">
+                <h2>Санкт-Петербург</h2>
+                <p class="h5">улица Шамшева 14;<br> пн-вс: 10:00-22:00</p>
+                <p class="h3"><a href="tel:+78123098128">8-812-309-81-28</a></p>
+                <p class="h3"><a href="mialto:info@olsp.ru">info@olsp.ru</a></p>
+                <p><b class="color-red">13 мин.</b> от ст. м. Петроградская</p>
+                <div id="contacts_map" class="contacts-map"></div>
+                <h2>Наши реквизиты</h2>
+                <div class="columns_2 columns_2--type_1">
+                    <div class="columns_2__column">
+                        <h3>Обслуживание физических лиц:</h3>
+                        <p>Индивидуальный предприниматель Шашерин Максим Анатольевич</p>
+                        <p>ИНН: 781139523135</p>
+                        <p>ОГРНИП: 315784700112127</p>
+                        <p>Индивидуальный предприниматель Молодкин Евгений Александрович</p>
+                        <p>ИНН: 781803027900</p>
+                        <p>ОГРНИП: 318784700368810</p>
+                    </div>
+                    <div class="columns_2__column">
+                        <h3>Обслуживание юридических лиц:</h3>
+                        <p>Общество с ограниченной ответственностью «Лидер»</p>
+                        <p>Юридический адрес: Россия, 197373, Санкт-Петербург, проспект Авиаконструкторов 38, корпус 1, ЛИТ. А</p>
+                        <p>Офис: Россия, Санкт-Петербург, улица Шамшева 14</p>
+                        <p>ОГРН: 1157847263881</p>
+                        <p>ИНН/КПП: 7814264679 / 781401001</p>
+                        <p>Система налогообложения: Общая (С НДС 18%)</p>
+                        <p>Телефон/факс: (812) 309-81-28</p>
+                        <p>E-MAIL: info@olsp.ru</p>
+                        <p>пн-пт: с 10 до 19</p>
+                        <p>сб: с 11 до 16</p>
                     </div>
                 </div>
             </div>
@@ -931,6 +964,8 @@
     <script src="js/accordion.js"></script>
     
     <script src="js/rating.js"></script>
+
+    <script src="js/contacts.js"></script>
 
     <script src="js/preloader.js"></script>
 </body>
