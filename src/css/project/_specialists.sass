@@ -1,5 +1,5 @@
 .specialists
-  @media(min-width: 1200px)
+  @media(min-width: 768px)
     display: flex
     margin-left: -10px
     margin-right: -10px
@@ -9,8 +9,8 @@
 
   &__item
     margin-bottom: 10px
-    
-    @media(min-width: 1200px)
+
+    @media(min-width: 768px)
       padding-left: 10px
       padding-right: 10px
       width: 50%
@@ -30,7 +30,9 @@
 
   &__person
     align-items: center
-    display: flex
+
+    @media(min-width: 1024px)
+      display: flex
 
   &__avatar
     min-width: 90px
@@ -47,7 +49,8 @@
 
   &__info
     flex-grow: 1
-    padding-left: 16px
+    @media(min-width: 1024px)
+      padding-left: 16px
 
     @media(min-width: 1900px)
       align-items: center
