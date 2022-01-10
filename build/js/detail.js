@@ -36,10 +36,10 @@ $(document).ready(function() {
           breakpoint: 1023,
           settings: {
             arrows: true,
-            prevArrow: '<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_up"/></svg></button>',
-            nextArrow: '<button class="slick-arrow slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></button>',
-            vertical: true,
-            centerMode: false,
+            prevArrow: '<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_left"/></svg></button>',
+            nextArrow: '<button class="slick-arrow slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow__arrow" aria-hidden="true"><use xlink:href="#arrow_right"/></svg></button>',
+            //vertical: true,
+            //centerMode: false,
             slidesToShow: 4,
             slidesToScroll: 1
           }

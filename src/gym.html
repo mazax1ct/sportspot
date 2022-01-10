@@ -58,6 +58,99 @@
                 </div>
             </div>
 
+            <div class="gym-calc">
+                <h2 class="gym-calc__title">Рассчитайте стоимость вашего проекта за <span class="color-red">30 секунд</span></h2>
+
+                <div class="gym-calc__steps">
+                    <button class="gym-calc__step-button is-active" type="button">1</button>
+                    <button class="gym-calc__step-button" type="button">2</button>
+                    <button class="gym-calc__step-button" type="button">3</button>
+                    <button class="gym-calc__step-button" type="button">4</button>
+                </div>
+
+                <div class="gym-calc__step">
+                    <h3 class="gym-calc__title">Выбирете площадь помещения</h3>
+
+                    <div class="gym-calc__square-block">
+                        <div class="js-square swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">1<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">2<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">3<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">4<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">5<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">6<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">7<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">8<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">9<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">10<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">11<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">12<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">13<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">14<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">15<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">16<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">17<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">18<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">19<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">20<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">21<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">22<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">23<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">24<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">25<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">26<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">27<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">28<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">29<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">30<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">990<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">991<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">992<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">993<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">994<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">995<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">996<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">997<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">998<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">999<span>м<sup>2</sup></span></div>
+                                <div class="swiper-slide">1000<span>м<sup>2</sup></span></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h3 class="gym-calc__title">Выбирете класс оборудования</h3>
+
+                    <div class="gym-calc__radios">
+                        <label class="gym-calc__radio">
+                            <input type="radio" name="type" value="1" checked>
+                            <span class="gym-calc__radio-text">Премиум</span>
+                        </label>
+                        <label class="gym-calc__radio">
+                            <input type="radio" name="type" value="2">
+                            <span class="gym-calc__radio-text">Бизнес</span>
+                        </label>
+                        <label class="gym-calc__radio">
+                            <input type="radio" name="type" value="3">
+                            <span class="gym-calc__radio-text">Эконом</span>
+                        </label>
+                    </div>
+
+                    <p class="gym-calc__price h1">12 000 руб</p>
+
+                    <div class="gym-calc__button-block">
+                        <button class="button button--type_4" type="button">
+                            Далее
+                            <svg>
+                                <use xlink:href="#round_arrow_right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
             <h2 class="text-center">5 этапов формирования фитнес зала</h2>
             <div class="text-block-860 text-block-860--type_1">
                 <h6>Общий вид тренажерного зала</h6>
@@ -198,6 +291,9 @@
     //= template/modals.html
 
     //= template/scripts.html
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/gym-calc.js"></script>
 
     <script src="js/preloader.js"></script>
 </body>

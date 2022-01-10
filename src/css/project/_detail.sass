@@ -28,15 +28,15 @@
     display: flex
     margin-bottom: 16px
 
-    @media(min-width: 1024px)
+    //@media(min-width: 1024px)
       padding-left: 80px
 
-    @media(min-width: 1900px)
+    //@media(min-width: 1900px)
       padding-left: 140px
 
   &__label
     align-items: center
-    border-radius: 23px
+    //border-radius: 23px
     color: #fff
     display: inline-flex
     font-size: 16px
@@ -84,8 +84,8 @@
       width: 50%
 
     @media(min-width: 1024px)
-      align-items: flex-start
-      display: flex
+      //align-items: flex-start
+      //display: flex
       max-width: 660px
       margin-bottom: 0
 
@@ -96,12 +96,12 @@
     border: 3px solid $text-color
     margin-bottom: 20px
 
-    @media(min-width: 1024px)
+    //@media(min-width: 1024px)
       margin-bottom: 0
       order: 2
       width: calc(100% - 80px)
 
-    @media(min-width: 1900px)
+    //@media(min-width: 1900px)
       width: calc(100% - 140px)
 
     img
@@ -109,12 +109,16 @@
       width: 100%
 
   &__thumbs
-    @media(min-width: 1024px)
+    //@media(min-width: 1024px)
       margin-right: 20px
       order: 1
       width: 60px
 
-    @media(min-width: 1900px)
+    @media(min-width: 1024px)
+      padding-left: 60px
+      padding-right: 60px
+
+    //@media(min-width: 1900px)
       margin-top: -11px
       margin-bottom: -11px
       margin-right: 35px
@@ -124,10 +128,12 @@
       border: 3px solid $text-color
       margin-left: auto
       margin-right: auto
+      max-width: 105px
       opacity: 0.4
+      width: 90%
 
     .slick-slide
-      @media(min-width: 1024px)
+      //@media(min-width: 1024px)
         padding-bottom: 11px
         padding-top: 11px
 
@@ -144,10 +150,10 @@
       display: flex
       height: 48px
       justify-content: center
-      left: 50%
       padding: 0
       position: absolute
-      transform: translateX(-50%)
+      top: 50%
+      transform: translateY(-50%)
       width: 48px
       z-index: 1
 
@@ -157,10 +163,11 @@
         width: 18px
 
     .slick-prev
-      top: -48px
+      left: -60px
 
     .slick-next
-      top: 100%
+      left: auto
+      right: -60px
 
   &__top-info
     max-width: 460px
@@ -173,7 +180,8 @@
     @media(min-width: 1900px)
       margin-left: 35px
 
-    .expert
+    .expert,
+    .guarantee
       margin-bottom: 24px
 
   &__short-text
@@ -207,12 +215,18 @@
     justify-content: space-between
     margin-top: auto
 
-    .round-button
+    .button
+      font-family: 'GT Eesti Pro Display', Arial, sans-serif
+      font-weight: 400
       padding-left: 16px
       padding-right: 16px
+      text-transform: none
 
-      @media(max-width: 1599px)
+      @media(max-width: 1023px)
         font-size: 12px
+
+      @media(min-width: 1350px) and (max-width: 1500px)
+        font-size: 13px
 
       svg
         height: 16px
@@ -268,6 +282,9 @@
 
     .button
       width: 100%
+
+    .button--type_3 + .button--type_3
+      margin-top: -2px
 
   &__actions
     display: flex
@@ -367,3 +384,12 @@
 
     img
       border: 3px solid $text-color
+
+.guarantee
+  background-color: $red
+  color: #fff
+  max-width: 460px
+  padding: 12px
+
+  @media(min-width: 1024px)
+    padding: 16px

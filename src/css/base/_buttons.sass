@@ -1,11 +1,13 @@
 .button
+  align-items: center
   border: none
   border-radius: 0
   cursor: pointer
-  display: inline-block
+  display: inline-flex
   font-family: 'Gilroy', 'GT Eesti Pro Display', Arial, sans-serif
   font-size: 14px
   font-weight: 700
+  justify-content: center
   line-height: 1.5
   min-height: 48px
   padding: 12px 16px
@@ -26,10 +28,16 @@
     background-color: $red
     color: #fff
 
+    svg
+      fill: #fff
+
     &:hover,
     &:focus
       background-color: $blue
       color: #fff
+
+      svg
+        fill: #fff
 
   &--type_2
     background-color: $text-color
@@ -46,10 +54,16 @@
     border: 2px solid $red
     color: $red
 
+    svg
+      fill: $red
+
     &:hover,
     &:focus
       background-color: $red
       color: #fff
+
+      svg
+        fill: #fff
 
   &--type_4
     background-color: #fff
@@ -68,6 +82,17 @@
 
     &:focus
       outline: none
+
+  svg
+    height: 24px
+    transition: fill 0.3s
+    width: 24px
+
+    &:first-child
+      margin-right: 10px
+
+    &:last-child
+      margin-left: 10px
 
 .round-button
   align-items: center
